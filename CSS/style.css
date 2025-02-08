@@ -2,18 +2,26 @@
     font-family: Poppins;
 }
 
-#socialheading {
-    color: green;
-    text-decoration: none;
-    text-align: left;
+#first {
+    padding-left: 10%;
+    padding-right: 10%;
 }
+
+.links {
+    border-width: 2px;
+    border-style: solid;
+    border-color: green;
+}
+
+
 
 .headings {
     color:green;
+    text-align: center;
 }
 
 .socials {
-    text-align: left;
+    text-align: center; 
     color: white;
     text-decoration: none;
     font-size: larger;
@@ -21,13 +29,14 @@
 
 h2 {
     text-align: center;
-    text-decoration: wavy underline;
+    text-decoration: underline;
     text-transform: capitalize;
 }
 
-p {
+.para {
     color: rgb(245, 248, 246);
     text-align: justify;
+    line-height: 25px;
 }
 
 button {
