@@ -1,6 +1,6 @@
-* {
-    font-family: Poppins;
-}
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;600;800&display=swap');
+
+
 
 #first {
     padding-left: 10%;
@@ -8,9 +8,10 @@
 }
 
 .links {
-    border-width: 2px;
+    border: 2px solid green; /*shorthand*/
+    /* border-width: 2px;
     border-style: solid;
-    border-color: green;
+    border-color: green; */
 }
 
 
@@ -36,7 +37,7 @@ h2 {
 .para {
     color: rgb(245, 248, 246);
     text-align: justify;
-    line-height: 25px;
+    line-height: 20px;
 }
 
 button {
@@ -45,5 +46,7 @@ button {
 }
 
 body {
-    background-color: rgb(20, 20, 20);
+    background-color: rgb(11, 11, 11);
+    font-family: "Nunito", sans-serif;
+    
 }
