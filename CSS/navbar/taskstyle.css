@@ -1,0 +1,27 @@
+.navbar {
+    background-color: #0f1111;
+    height: 60px;
+    border: 7px solid white;
+    padding-top: 5px;
+}
+
+body {
+    background-color: black;
+}
+
+#linktext {
+    color: #f08804;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+.text {
+    color: white;
+    margin-right:200px;
+   
+}
+
+#searchbutton {
+    background-color: #f08804;
+    color: white;
+}

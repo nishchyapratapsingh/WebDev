@@ -1,0 +1,40 @@
+
+#rectangle {
+    height: 380px;
+    width: 150px;
+    background-color: black;
+    align-content: center;
+    
+}
+
+#redlight {
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    border-radius: 50%;
+    margin: 20px;
+}
+
+#yellowlight {
+    height: 100px;
+    width: 100px;
+    background-color: yellow;
+    border-radius: 50%;
+    margin: 20px;
+}
+
+#greenlight {
+    height: 100px;
+    width: 100px;
+    background-color: green;
+    border-radius: 50%;
+    margin: 20px;
+}
+
+body {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    height: 100vh; 
+    margin: 0; 
+}
