@@ -1,0 +1,9 @@
+#div1 {
+    height: 200px;
+    width: 200px;
+    background-image: url("nature_photo.jpg");
+    background-size: cover;
+    position: fixed;
+    right: 0;
+    top: 20px;
+}
