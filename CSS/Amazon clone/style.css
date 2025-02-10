@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: border-box;
+    font-family: Arial;
+}
+
+.navbar {
+    height: 60px;
+    background-color: #0f1111;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.nav-logo {
+    height: 50px;
+    width: 114px;
+}
+
+.logo {
+    height: 50px;
+    width: 100%;
+    background-image: url("logo1.png");
+    background-size: cover;
+}
+
+.border {
+    border: 1.5px solid transparent;
+}
+
+.border:hover {
+    border: 1.5px solid white;
+}
+
+/* Second box */
+
+
+.address-icon {
+    display: flex;
+    align-items: center;
+}
+
+.addressfirst {
+    font-size: 0.85rem;
+    color: #cccccc;
+    margin-left: 15px;
+}
+
+.addresssecond {
+    font-size: 1rem;
+    color: #ffffff;
+    margin-left: 3px;
+}
+
+/* third box */
+.nav-search {
+    display: flex;
+    height: 40px;
+    width: 650px;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.selectfrom {
+    width: 55px;
+    background-color: #e6e6e6;
+    color: #0f1111;
+    text-align: center;
+    border:none;
+    border-right: 2px solid transparent;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius:  5px;
+}
+
+.searchbox {
+    width: 100%;
+    font-size: 1rem;
+    border:none;
+    padding-left: 7px;
+    outline: none;
+}
+
+.searchicon {
+    width: 45px;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #febd68;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    color: #0f1111;
+}
+
+.nav-search:focus-within {
+    border: 3px solid orange;
+    border-radius: 8px;
+    outline:none;
+}

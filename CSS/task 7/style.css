@@ -4,6 +4,8 @@
     background-color: black;
 }
 
+
+
 @media (max-width: 300px) {
     #div1 {
         background-color: green;
