@@ -11,7 +11,7 @@
     color: white;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
 
 }
 
@@ -59,7 +59,7 @@
 .nav-search {
     display: flex;
     height: 40px;
-    width: 650px;
+    width: 600px;
     justify-content: center;
     border-radius: 5px;
 }
@@ -99,4 +99,46 @@
     border: 3px solid orange;
     border-radius: 8px;
     outline:none;
+}
+
+/* Flag */
+.nav-flag {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    margin-top: 10px;
+}
+
+.flag {
+    width: 21.6px;
+    height: 16.2px;
+    background-image: url(Flag-United-States-of-America.webp);
+    background-size: cover;
+}
+
+.weight-text {
+    font-weight: 700;
+    font-size: 14px;
+}
+
+/* Accounts */
+.nav-cart {
+    display: flex;
+    gap: 3px;
+    justify-content: center;
+    align-items: center;
+}
+
+.normaltext {
+    font-size: 12px;
+}
+
+.carticon {
+    font-size: 1.5rem;
+}
+
+.carttext {
+    margin-top: 10px;
 }
