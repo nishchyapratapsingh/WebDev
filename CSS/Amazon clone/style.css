@@ -79,10 +79,12 @@ body {
     border-right: 2px solid transparent;
     border-top-left-radius: 5px;
     border-bottom-left-radius:  5px;
+    color: #5e5e5e;
 }
 
 .selectfrom:hover {
     background-color: #d4d4d4;
+    color: black;
 }
 
 .searchbox {
