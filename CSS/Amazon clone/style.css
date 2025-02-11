@@ -16,8 +16,8 @@
 }
 
 .nav-logo {
-    height: 50px;
-    width: 114px;
+    height: 60px;
+    width: 120px;
 }
 
 .logo {
@@ -75,6 +75,10 @@
     border-bottom-left-radius:  5px;
 }
 
+.selectfrom:hover {
+    background-color: #d4d4d4;
+}
+
 .searchbox {
     width: 100%;
     font-size: 1rem;
@@ -93,6 +97,10 @@
     border-bottom-right-radius: 5px;
     border-top-right-radius: 5px;
     color: #0f1111;
+}
+
+.searchicon:hover{
+    background-color: #f3a847;
 }
 
 .nav-search:focus-within {
@@ -135,10 +143,66 @@
     font-size: 12px;
 }
 
+/*Cart Area*/
 .carticon {
     font-size: 1.5rem;
 }
 
 .carttext {
     margin-top: 10px;
+}
+
+/**Panel**/
+.panel {
+    display: flex;
+    height: 40px;
+    background-color: #232f3e;
+    justify-content: left;
+    align-items: center;
+    color: white;
+    gap: 9px;
+
+}
+
+/*Menu*/
+.menuall {
+    height: 39px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 17px;
+}
+
+.menutext {
+    font-size: 14px;
+    font-weight: 700;
+    padding-left: 5px;
+}
+
+.iconmenu {
+    height: 14px;
+    weight: 17px;
+    font-size: 17px;
+    margin-bottom: 3px;
+}
+
+.panel-text {
+    height: 39px;
+}
+
+
+
+
+.panel-ops {
+    height: 39px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.panel-ops p {
+    font-size: 14px;
+    margin-top: 10px;
+    margin-left: 7px;
+    margin-right: 7px;
 }
