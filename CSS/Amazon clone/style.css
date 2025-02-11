@@ -3,6 +3,12 @@
     padding: 0;
     border: border-box;
     font-family: Arial;
+    
+}
+
+body {
+    background-color: #e3e6e6;
+
 }
 
 .navbar {
@@ -16,7 +22,7 @@
 }
 
 .nav-logo {
-    height: 60px;
+    height: 50px;
     width: 120px;
 }
 
@@ -188,6 +194,8 @@
 
 .panel-text {
     height: 39px;
+    display: flex;
+    align-items: center;
 }
 
 
@@ -200,9 +208,46 @@
     justify-content: center;
 }
 
-.panel-ops p {
+.panel-ops a {
     font-size: 14px;
-    margin-top: 10px;
     margin-left: 7px;
     margin-right: 7px;
+    text-decoration: none;
+    color: white;
 }
+
+/** Hero Section **/
+.hero-section {
+    height: 550px;
+    background-image:linear-gradient(to bottom, rgba(252, 225, 236, 0) 60%, #e3e6e6 100%),
+    url("bannerbeautyproducts.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/**Content Area**/
+.contentarea {
+    position: relative;
+    top: -300px;
+    z-index: 10;
+}
+.boxes {
+    display: flex;
+    justify-content: space-evenly;
+    
+    
+}
+
+.box {
+    width: 31%;
+    height: 400px;
+    background-color: white;
+}
+
+.contentarea2 {
+    margin-top: -100px;
+    height: 1000px;
+
+}
+
+
