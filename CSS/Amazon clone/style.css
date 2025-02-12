@@ -250,10 +250,10 @@ body {
     width: 28.5%;
     height: 370px;
     background-color: white;
-    padding-top: 20px;
-    padding-left: 15px;
-    padding-bottom: 20px;
-    padding-right: 15px;
+    padding-top: 25px;
+    padding-left: 20px;
+    padding-bottom: 25px;
+    padding-right: 20px;
 }
 
 .contentarea2 {
@@ -268,26 +268,24 @@ body {
 }
 
 /*Content in boxes*/
+
 .headingbox {
-    font-size: 21px;
-    font-weight: 700;
+    font-size: 0.9rem; 
 }
 
-.imagesbox {
-    height: 90%;
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(2,1fr);
-    gap: 10px;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-bottom: 200px;
+.box-link {
+    text-decoration: none;
+    font-size: smaller;
+    color: #2162a1;
 }
 
-.imagesbox img {
-    width: 100%;
-    height: auto;
-
+.box-link:hover {
+    color: #0c3353;
 }
 
-
+.boximage {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    height: 80%;
+    background-size: cover;
+}
