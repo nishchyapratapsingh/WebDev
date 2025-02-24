@@ -275,7 +275,7 @@ body {
 
 .box-link {
     text-decoration: none;
-    font-size: smaller;
+    font-size: 0.8rem;
     color: #2162a1;
 }
 
@@ -287,5 +287,29 @@ body {
     margin-top: 15px;
     margin-bottom: 20px;
     height: 80%;
-    background-size: cover;
+}
+
+.gridlayout {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.box3 {
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+.imagegrid {
+    height: 40%;
+    width: 45%;
 }
