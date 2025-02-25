@@ -65,7 +65,7 @@ body {
 .nav-search {
     display: flex;
     height: 40px;
-    width: 600px;
+    width: 50%;
     justify-content: center;
     border-radius: 5px;
 }
@@ -365,3 +365,51 @@ body {
     height: 200px;
 }
 
+.signinframe {
+    margin-top: 20px;
+    height: 242px;
+    background-color: #ffffff;
+
+}
+
+.contentframe {
+    position: relative;
+    top: 53px;    
+    height: 162px;
+    width: auto;
+    border: 1px solid #DDD;
+
+}
+
+.signinbutton {
+    width: 293px;
+    height: 35px;
+    text-align: center;
+    background-color: #ffd814;
+    border: none;
+    border-radius: 20px;
+}
+
+.signinbutton:hover {
+    background-color: #ffce12;
+}
+
+.signhead {
+    margin-top: 50px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.signbutton {
+
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    line-height: 32px;
+}
+
+.signtext {
+    text-align: center;
+    font-size: 11px;
+}
