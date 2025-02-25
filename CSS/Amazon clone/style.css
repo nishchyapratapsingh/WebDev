@@ -262,9 +262,13 @@ body {
 }
 
 .recbox {
-    width: 96.5%;
-    height: 300px;
+    width: 94.35%;
+    height: 250px;
     background-color: white;
+    padding-top: 25px;
+    padding-left: 20px;
+    padding-bottom: 25px;
+    padding-right: 20px;
 }
 
 /*Content in boxes*/
@@ -320,4 +324,44 @@ body {
 
 .gl1 {
     height: 75%;
+    gap: 6px;
 }
+
+.recboxitems {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.car1 {
+    background-image: url(car1.jpg);
+    background-size: cover;
+    width: 256px;
+    height: 200px;
+}
+
+.car2 {
+    background-image: url(car2.jpg);
+    background-size: cover;
+    width: 270px;
+    height: 148px;
+}
+
+.car3 {
+    background-image: url(car3.jpg);
+    background-size: cover;
+    width: 270px;
+    height: 156px;
+}
+
+.car4 {
+    background-image: url(car4.jpg);
+    background-size: cover;
+    width: 173px;
+    height: 200px;
+}
+
