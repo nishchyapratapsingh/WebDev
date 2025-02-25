@@ -290,9 +290,9 @@ body {
 }
 
 .gridlayout {
-    margin-top: 15px;
+    margin-top: 10px;
     margin-bottom: 20px;
-    height: 80%;
+    height: 82%;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -308,3 +308,16 @@ body {
 }
 
 /* Content area 2*/
+.imagekitchengrid1 {
+    width: 100%;
+    height: 50%;
+}
+
+.imagekitchengrid {
+    width: 32%;
+    height: 33%;
+}
+
+.gl1 {
+    height: 75%;
+}
