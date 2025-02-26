@@ -231,6 +231,8 @@ body {
     url("bannerbeautyproducts.jpg");
     background-size: cover;
     background-position: center;
+    
+    border: none;
 }
 
 /**Content Area**/
@@ -439,11 +441,16 @@ body {
     text-decoration: none;
 }
 
+/*Footer Options*/
+
 .bottomoptions {
     background-color: #232f3e;
+    width: 100%;
     height: 507px;
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
+    white-space: normal;
     
 }
 
@@ -458,7 +465,7 @@ body {
 .optionsurl a {
     color: #dddddd;
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 0.89rem;
 
 }
 
@@ -467,7 +474,7 @@ body {
 }
 
 .boset {
-    margin: 50px;
+    margin-top: 50px;
     gap: 41px;
 }
 
@@ -476,4 +483,16 @@ body {
     color: #dddddd;
     font-size: 16px;
     font-weight: 700;
+}
+
+.boset1 {
+    width: 10%;
+}
+
+.boset2 {
+    width: 14%;
+}
+
+.boset4 {
+    width: 12%;
 }
