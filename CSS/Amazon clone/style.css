@@ -496,3 +496,58 @@ body {
 .boset4 {
     width: 12%;
 }
+
+.footersection {
+    height: 108px;
+    background-color: #232f3e;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.footerlogo {
+    margin-top: 25px;
+    background-image: url(logo1.png);
+    background-size: cover;
+    width: 90px;
+    height: 35px;
+}
+
+.footerb1 {
+    margin-left: 80px;
+    font-size: 0.85rem;
+    margin-top: 26px;
+    width: 100px;
+    height: 22px;
+    color: #cccccc;
+    border: 1px solid #8d9096;
+    border-radius: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.footerb2 {
+    font-size: 0.85rem;
+    margin-top: 26px;
+    width: 120px;
+    height: 22px;
+    color: #cccccc;
+    border: 1px solid #8d9096;
+    border-radius: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: flex;
+    align-items: center;
+
+}
+
+.imagefooter {
+    width: 18px;
+    height: 12px;
+}
