@@ -8,7 +8,7 @@
 
 body {
     background-color: #e3e6e6;
-
+    
 }
 
 .navbar {
@@ -237,8 +237,7 @@ body {
 
 /**Content Area**/
 .contentarea {
-    position: relative;
-    top: -300px;
+    margin-top: -300px;
     z-index: 10;
 }
 .boxes {
@@ -506,6 +505,7 @@ body {
 }
 
 .footerlogo {
+    cursor: pointer;
     margin-top: 25px;
     background-image: url(logo1.png);
     background-size: cover;
@@ -514,6 +514,7 @@ body {
 }
 
 .footerb1 {
+    cursor: pointer;
     margin-left: 80px;
     font-size: 0.85rem;
     margin-top: 26px;
@@ -531,6 +532,7 @@ body {
 }
 
 .footerb2 {
+    cursor: pointer;
     font-size: 0.85rem;
     margin-top: 26px;
     width: 120px;
@@ -551,3 +553,10 @@ body {
     width: 18px;
     height: 12px;
 }
+
+.footer {
+    background-image: url(footer.png);
+    background-size: cover;
+    height: 553px;
+}
+
