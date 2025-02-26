@@ -367,27 +367,29 @@ body {
 
 .signinframe {
     margin-top: 20px;
-    height: 242px;
+    height: 232px;
     background-color: #ffffff;
 
 }
 
 .contentframe {
     position: relative;
-    top: 53px;    
-    height: 162px;
+    top: 50px;    
+    height: 158px;
     width: auto;
     border: 1px solid #DDD;
+    border-radius: 5px;
 
 }
 
 .signinbutton {
-    width: 293px;
+    width: 223px;
     height: 35px;
     text-align: center;
     background-color: #ffd814;
     border: none;
     border-radius: 20px;
+    cursor: pointer;
 }
 
 .signinbutton:hover {
@@ -407,9 +409,71 @@ body {
     margin-top: 10px;
     margin-bottom: 5px;
     line-height: 32px;
+
 }
 
 .signtext {
     text-align: center;
     font-size: 11px;
+}
+
+.backtotop {
+    height: 52px;
+    background-color: #37475a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.backtotop:hover {
+    background-color: #485769;
+}
+
+.textbacktotop {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.backtotopclick {
+    text-decoration: none;
+}
+
+.bottomoptions {
+    background-color: #232f3e;
+    height: 507px;
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+.optionsurl {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.optionsurl a {
+    color: #dddddd;
+    text-decoration: none;
+    font-size: 0.9rem;
+
+}
+
+.optionsurl a:hover {
+    text-decoration: underline;
+}
+
+.boset {
+    margin: 50px;
+    gap: 41px;
+}
+
+.bohead {
+    margin: 0 0 14px 0;
+    color: #dddddd;
+    font-size: 16px;
+    font-weight: 700;
 }
