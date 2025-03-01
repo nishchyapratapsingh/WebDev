@@ -195,7 +195,7 @@ body {
 
 .iconmenu {
     height: 14px;
-    weight: 17px;
+    width: 17px;
     font-size: 17px;
     margin-bottom: 3px;
 }
@@ -474,7 +474,6 @@ body {
 
 .boset {
     margin-top: 50px;
-    gap: 41px;
 }
 
 .bohead {
@@ -555,9 +554,15 @@ body {
 }
 
 .footer {
-    background-image: url(footer.png);
-    background-size: cover;
-    height: 553px;
+    padding-left: 7%;
+    padding-right: 7%;
+    height: 465px;
+    background-color: #131a22;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    white-space: normal;
+    gap: 40px;
 }
 
 /*to add basic responsiveness*/
@@ -570,4 +575,22 @@ body {
       overflow-x: hidden;
     }
   }
-  
+
+.optionsfooter {
+    gap: 30px;
+}
+
+.fohead {
+    color: #dddddd;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.foset {
+    width: 11%;
+}
+
+.optionsfooter a {
+    color: #999999;
+
+}
