@@ -24,7 +24,17 @@ A simple Amazon clone website built using HTML and CSS.
    ```
 3. Open `index.html` in your browser.
 
+## Live Demo 🚀  
+Check out the live version of this project here:  
+
+🔗 [Amazon Clone on Vercel](https://amazonclone-nps.vercel.app/)
+
+
 ## Screenshots
+
+![Screenshot1](images/screenshot1.png)
+![Screenshot2](images/screenshot2.png)
+![Screenshot3](images/screenshot3.png)
 
 
 ## Future Enhancements
