@@ -15,7 +15,7 @@ A simple Amazon clone website built using HTML and CSS.
 ## Installation & Usage
 1. Clone the repository:
    ```sh
-   git clone git clone https://github.com/nishchyapratapsingh/WebDev.git
+   git clone https://github.com/nishchyapratapsingh/WebDev.git
 
    ```
 2. Navigate to the project folder:
