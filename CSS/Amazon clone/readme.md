@@ -4,6 +4,7 @@ A simple Amazon clone website built using HTML and CSS.
 
 ## Features
 - Amazon-like homepage layout
+- Details and effects
 - Navigation bar with search bar
 - Product listings with images and descriptions
 - Footer with links
