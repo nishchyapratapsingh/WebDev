@@ -29,7 +29,7 @@ body {
 .logo {
     height: 50px;
     width: 100%;
-    background-image: url("logo1.png");
+    background-image: url("images/logo1.png");
     background-size: cover;
 }
 
@@ -136,7 +136,7 @@ body {
 .flag {
     width: 21.6px;
     height: 16.2px;
-    background-image: url(Flag-United-States-of-America.webp);
+    background-image: url(images/Flag-United-States-of-America.webp);
     background-size: cover;
 }
 
@@ -228,7 +228,7 @@ body {
 .hero-section {
     height: 550px;
     background-image:linear-gradient(to bottom, rgba(252, 225, 236, 0) 60%, #e3e6e6 100%),
-    url("bannerbeautyproducts.jpg");
+    url("images/bannerbeautyproducts.jpg");
     background-size: cover;
     background-position: center;
     
@@ -339,28 +339,28 @@ body {
 }
 
 .car1 {
-    background-image: url(car1.jpg);
+    background-image: url(images/car1.jpg);
     background-size: cover;
     width: 256px;
     height: 200px;
 }
 
 .car2 {
-    background-image: url(car2.jpg);
+    background-image: url(images/car2.jpg);
     background-size: cover;
     width: 270px;
     height: 148px;
 }
 
 .car3 {
-    background-image: url(car3.jpg);
+    background-image: url(images/car3.jpg);
     background-size: cover;
     width: 270px;
     height: 156px;
 }
 
 .car4 {
-    background-image: url(car4.jpg);
+    background-image: url(images/car4.jpg);
     background-size: cover;
     width: 173px;
     height: 200px;
@@ -506,7 +506,7 @@ body {
 .footerlogo {
     cursor: pointer;
     margin-top: 25px;
-    background-image: url(logo1.png);
+    background-image: url(images/logo1.png);
     background-size: cover;
     width: 90px;
     height: 35px;
