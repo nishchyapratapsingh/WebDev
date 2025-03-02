@@ -51,5 +51,5 @@ Feel free to fork this repository and contribute by submitting a pull request.
 This project is open-source and available under the MIT License.
 
 ---
-Made with ❤️ by [Nishchya Singh]
+Made with ❤️ by [Nishchya Singh](https://github.com/nishchyapratapsingh)
 
