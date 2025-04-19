@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    border: none;
+    padding: 0;
+}
+
+#heading {
+    color: blueviolet;
+    background-color: yellow;
+}
+
+#incompleteText {
+    color:rgb(115, 0, 255)
+}
+
+.box {
+    background-color: cyan;
+    height: 100px;
+    width: 100px;
+    border: solid black 2px;
+    margin: 5px;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+
+
