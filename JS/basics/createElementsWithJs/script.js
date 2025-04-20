@@ -10,4 +10,4 @@ newButton.style.margin = "10px";
 newButton.style.width = "100px";
 
 //add button to document flow
-document.querySelector("body").append(newButton);
+document.querySelector("body").prepend(newButton);
