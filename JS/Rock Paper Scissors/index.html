@@ -6,7 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="styles.css" />
     <div class="header">
-      <h1 id="heading">Rock, Paper and Scissors</h1>
+      <h1 class="heading">Rock, Paper and Scissors</h1>
     </div>
   </head>
   <body>
@@ -15,6 +15,24 @@
       <div class="paperBtn"></div>
       <div class="scissorsBtn"></div>
     </div>
+    <div class="scoreCount">
+      <div class="userScoreBox">
+        <p>You:</p>
+        <p id="userScore">0</p>
+      </div>
+      <div class="compScoreBox">
+        <p>Computer:</p>
+        <p id="compScore">0</p>
+      </div>
+    </div>
+    <div class="statusBoxOuter">
+      <div class="statusBox"><p id="statusBoxText">Play your move</p></div>
+    </div>
+    <footer>
+      <div class="footerText">
+        <p>&copy; 2025 Nishchya Pratap Singh. All rights reserved.</p>
+      </div>
+    </footer>
   </body>
   <script src="script.js"></script>
 </html>

@@ -8,12 +8,12 @@ body {
   background-color: white;
 }
 
-#heading {
-  color: #e0e0e0;
+.heading {
+  color: white;
 }
 
 .header {
-  background-color: #4a6888;
+  background-color: #7facff;
   width: 100%;
   height: 10vh;
   display: flex;
@@ -55,4 +55,69 @@ body {
   border-radius: 50%;
   height: 150px;
   width: 150px;
+}
+
+.scoreCount {
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    gap: 15px;
+    color: white;
+}
+
+.userScoreBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 10px;
+    height: 40px;
+    width: 200px;
+    background-color: #c38edc;
+    border-radius: 10px;
+}
+
+.compScoreBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 10px;
+    height: 40px;
+    width: 200px;
+    background-color: #c38edc;
+    border-radius: 10px;
+}
+
+.statusBoxOuter {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.statusBox {
+    height: 40px;
+    width: 479px;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #f083a2;
+    text-align: center;
+    color: white;
+    font-size: 1.9rem;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+}
+
+.footerText {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 10vh;
+    background-color: #7facff;
+    font-size: 1.2rem;
+    color: white;
 }
