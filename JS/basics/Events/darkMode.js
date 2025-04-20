@@ -14,9 +14,11 @@ const lightMode = () => {
 themeBtn.addEventListener("click", () => {
   if (isDarkMode) {
     lightMode();
-    isDarkMode=false;
+    isDarkMode = false;
   } else {
-    isDarkMode=true;
+    isDarkMode = true;
     darkMode();
   }
 });
+
+//we could also create darkmode and lightmode classes in css and then add them to the classList of body in event listeners

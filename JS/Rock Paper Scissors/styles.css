@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+body {
+  background-color: white;
+}
+
+#heading {
+  color: #e0e0e0;
+}
+
+.header {
+  background-color: #4a6888;
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons {
+  margin-top: 10px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  gap: 25px;
+  height: 45vh;
+}
+
+.rockBtn {
+  background-image: url("images/rock.png");
+  background-size: cover;
+  background-position: center;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+}
+
+.paperBtn {
+  background-image: url("images/paper.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+}
+
+.scissorsBtn {
+  background-image: url("images/scissors.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+}
