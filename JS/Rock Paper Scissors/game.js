@@ -61,17 +61,26 @@ playButtons.forEach((btn) => {
 
     if (userScore >= 5 || compScore >= 5) {
       userScore > compScore
-        ? (statusText.innerHTML =
-            "<p>Congratulations! You Won\t<i class='fa-solid fa-rotate-right'></i></p>")
-        : (statusText.innerHTML =
-            "<p>Comp wins! Try again\t<i class='fa-solid fa-rotate-right'></i></p>");
+      if (userScore > compScore) {
+        statusText.innerHTML =
+          "<p>Congratulations! You Won\t<i class='fa-solid fa-rotate-right'></i></p>";
+          statusBox.classList.add("statusWon");
+
+      } else {
+        statusText.innerHTML =
+          "<p>Comp wins! Try again\t<i class='fa-solid fa-rotate-right'></i></p>";
+          statusBox.classList.add("statusLost");
+
+      }
+      
 
       playButtons.forEach((btn) => {
         btn.style.pointerEvents = "none";
         btn.style.opacity = "0.5";
       });
 
-      statusBox.style.cursor = 'pointer';
+      statusBox.style.cursor = "pointer";
+      statusBox.classList.add("expanded");
       statusBox.addEventListener("click", () => {
         location.reload();
       });

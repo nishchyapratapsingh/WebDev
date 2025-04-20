@@ -22,7 +22,7 @@ body {
 }
 
 .turns {
-    margin-top: 10px;
+  margin-top: 10px;
   display: flex;
   gap: 80px;
   justify-content: center;
@@ -30,13 +30,13 @@ body {
 }
 
 .boxTurn {
-    color: blueviolet;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50px;
-    width: 200px;
-    font-size: 1.5rem;
+  color: blueviolet;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 200px;
+  font-size: 1.5rem;
 }
 
 .buttons {
@@ -45,6 +45,10 @@ body {
   display: flex;
   gap: 25px;
   height: 40vh;
+}
+
+.playBtn {
+  cursor: pointer;
 }
 
 #rockBtn {
@@ -147,6 +151,18 @@ body {
   align-items: center;
   color: white;
   font-size: 1.7rem;
+}
+
+.expanded {
+  transform: scale(1.05);
+}
+
+.statusWon {
+  background-color: green;
+}
+
+.statusLost {
+  background-color: red;
 }
 
 footer {
