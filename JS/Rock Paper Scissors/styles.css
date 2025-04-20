@@ -21,13 +21,30 @@ body {
   align-items: center;
 }
 
+.turns {
+    margin-top: 10px;
+  display: flex;
+  gap: 80px;
+  justify-content: center;
+  align-items: center;
+}
+
+.boxTurn {
+    color: blueviolet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 200px;
+    font-size: 1.5rem;
+}
+
 .buttons {
-  margin-top: 10px;
   justify-content: center;
   align-items: center;
   display: flex;
   gap: 25px;
-  height: 45vh;
+  height: 40vh;
 }
 
 #rockBtn {
@@ -70,7 +87,7 @@ body {
 }
 
 .clicked {
-    border: 4px solid black;
+  border: 4px solid black;
 }
 
 .scoreCount {
@@ -94,7 +111,7 @@ body {
 }
 
 .userScoreBox:hover {
-    transform: scale(1.02) translateY(-3px);
+  transform: scale(1.02) translateY(-3px);
 }
 
 .compScoreBox {
@@ -110,7 +127,7 @@ body {
 }
 
 .compScoreBox:hover {
-    transform: scale(1.02) translateY(-3px);
+  transform: scale(1.02) translateY(-3px);
 }
 
 .statusBoxOuter {
