@@ -16,6 +16,8 @@ let statusText = document.querySelector("#statusBoxText");
 let userScoreElem = document.querySelector("#userScore");
 let compScoreElem = document.querySelector("#compScore");
 
+let statusBox = document.querySelector(".statusBox");
+
 playButtons.forEach((btn) => {
   btn.addEventListener("click", () => {
     let clickedID = btn.id;
@@ -45,7 +47,7 @@ playButtons.forEach((btn) => {
       (userTurn == 3 && compTurn == 2)
     ) {
       userScore++;
-      statusText.innerText = `${turns[userTurn]} beats ${turns[compTurn]}`;
+      statusText.innerText = `${turns[userTurn]} beats ${turns[compTurn]}!`;
     } else {
       compScore++;
       statusText.innerText = `${turns[compTurn]} beats your ${turns[userTurn]}`;
@@ -59,13 +61,20 @@ playButtons.forEach((btn) => {
 
     if (userScore >= 5 || compScore >= 5) {
       userScore > compScore
-        ? (statusText.innerText = `Congratulations! You Won`)
-        : (statusText.innerText = `Comp wins! Try again`);
+        ? (statusText.innerHTML =
+            "<p>Congratulations! You Won\t<i class='fa-solid fa-rotate-right'></i></p>")
+        : (statusText.innerHTML =
+            "<p>Comp wins! Try again\t<i class='fa-solid fa-rotate-right'></i></p>");
 
-        playButtons.forEach((btn)=> {
-            btn.style.pointerEvents = "none";
-            btn.style.opacity = "0.5";
-        })
+      playButtons.forEach((btn) => {
+        btn.style.pointerEvents = "none";
+        btn.style.opacity = "0.5";
+      });
+
+      statusBox.style.cursor = 'pointer';
+      statusBox.addEventListener("click", () => {
+        location.reload();
+      });
     }
   });
 });
