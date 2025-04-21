@@ -64,8 +64,8 @@ playButtons.forEach((btn) => {
       statusText.innerText = `${turns[compTurn]} beats your ${turns[userTurn]}`;
     }
 
-    userTurnStatus.innerText = `\t${turns[userTurn]}`;
-    compTurnStatus.innerText = `\t${turns[compTurn]}`;
+    userTurnStatus.innerHTML = `&nbsp;${turns[userTurn]}`;
+    compTurnStatus.innerHTML = `&nbsp;${turns[compTurn]}`;
 
     userScoreElem.innerText = userScore;
     compScoreElem.innerText = compScore;
