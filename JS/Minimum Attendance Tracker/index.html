@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minimum Attendance Tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/cb2143a49e.js"
+      crossorigin="anonymous"
+    ></script>
+    <div class="header"><h1>Minimum Attendance Tracker</h1></div>
+  </head>
+  <body>
+    <div class="workArea">
+      <div class="outerBox">
+        <div class="totalClassesBox box">
+          <input type="number" id="totalClasses" min="1" />
+          <br />
+          <h2 class="labels">Total Classes Held</h2>
+        </div>
+        <div class="attendedClassesBox box">
+          <input type="number" id="attendedClasses" min="0" />
+          <br />
+          <h2 class="labels">Attended Classes</h2>
+        </div>
+        <div class="minPercentageReqBox box">
+          <input
+            placeholder="75%"
+            type="number"
+            id="minPercentageReq"
+            min="10"
+            max="100"
+          />
+          <br />
+          <h2 class="labels">Percentage Required</h2>
+        </div>
+      </div>
+    </div>
+    <div class="resultArea">
+      <div class="resultAreaBox">
+        <p class="resultClasses">
+          Compute <i class="fa-solid fa-calculator"></i>
+        </p>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>

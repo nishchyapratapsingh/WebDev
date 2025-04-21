@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+body {
+    background-color: #EFC69B;
+}
+
+.header {
+    height: 10vh;
+    background-color: #AF1B3F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #CCB69B;
+}
+
+.workArea {
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.outerBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+input {
+    border-radius: 50%;
+    background-color: #473144;
+    color: white;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.box {
+    width: 150px;
+    height: 180px;
+    text-align: center;
+    color: #AF1B3F;
+}
+
+.resultArea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.resultAreaBox {
+    cursor: pointer;
+    height: 10vh;
+    width: 490px;
+    border: 3px solid #473144;
+    border-radius: 10px;
+    background-color: #CCB69B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: #473144;
+
+}
+
+.resultAreaBox:hover {
+    transform: scale(1.05);
+}
+
+label {
+    color: #473144;
+    font-size: 0.8rem;
+}
+
+.labels {
+    font-size: 1.5rem;
+}
+
+.error {
+    color: red;
+}
+
+
