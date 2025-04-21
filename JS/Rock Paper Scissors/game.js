@@ -9,7 +9,6 @@ compScore = localStorage.getItem("compScore")
   ? parseInt(localStorage.getItem("compScore"))
   : 0;
 
-
 let userTurn;
 let compTurn;
 
@@ -75,7 +74,7 @@ playButtons.forEach((btn) => {
     localStorage.setItem("compScore", compScore);
 
     if (userScore >= 5 || compScore >= 5) {
-      userScore > compScore;
+      localStorage.clear();
       if (userScore > compScore) {
         statusText.innerHTML =
           "<p>Congratulations! You Won\t<i class='fa-solid fa-rotate-right'></i></p>";
@@ -94,7 +93,6 @@ playButtons.forEach((btn) => {
       statusBox.style.cursor = "pointer";
       statusBox.classList.add("expanded");
       statusBox.addEventListener("click", () => {
-        localStorage.clear();
         location.reload();
       });
     }
