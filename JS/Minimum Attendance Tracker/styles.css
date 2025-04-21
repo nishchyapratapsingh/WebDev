@@ -52,6 +52,18 @@ input {
     color: #AF1B3F;
 }
 
+#attendedClasses:hover {
+    transform: translateY(-8px);
+}
+
+#totalClasses:hover {
+    transform: translateY(-8px);
+}
+
+#minPercentageReq:hover {
+    transform: translateY(-8px);
+}
+
 .resultArea {
     display: flex;
     justify-content: center;
