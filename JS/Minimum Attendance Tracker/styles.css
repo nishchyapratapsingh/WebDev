@@ -105,11 +105,11 @@ label {
 @media (max-width: 768px) {
     .header {
         width: 100%;
-        font-size: 80%;
+        font-size:70%;
     }
 
     .workArea {
-        height: 80vh;
+        height: 70vh;
     }
 
     .outerBox {
