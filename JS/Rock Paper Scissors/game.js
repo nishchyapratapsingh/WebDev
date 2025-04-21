@@ -1,5 +1,14 @@
-let userScore = 0;
-let compScore = 0;
+let userScore;
+let compScore;
+
+userScore = localStorage.getItem("userScore")
+  ? parseInt(localStorage.getItem("userScore"))
+  : 0;
+
+compScore = localStorage.getItem("compScore")
+  ? parseInt(localStorage.getItem("compScore"))
+  : 0;
+
 
 let userTurn;
 let compTurn;
@@ -15,6 +24,9 @@ let statusText = document.querySelector("#statusBoxText");
 
 let userScoreElem = document.querySelector("#userScore");
 let compScoreElem = document.querySelector("#compScore");
+
+userScoreElem.innerText = userScore;
+compScoreElem.innerText = compScore;
 
 let statusBox = document.querySelector(".statusBox");
 
@@ -59,20 +71,20 @@ playButtons.forEach((btn) => {
     userScoreElem.innerText = userScore;
     compScoreElem.innerText = compScore;
 
+    localStorage.setItem("userScore", userScore);
+    localStorage.setItem("compScore", compScore);
+
     if (userScore >= 5 || compScore >= 5) {
-      userScore > compScore
+      userScore > compScore;
       if (userScore > compScore) {
         statusText.innerHTML =
           "<p>Congratulations! You Won\t<i class='fa-solid fa-rotate-right'></i></p>";
-          statusBox.classList.add("statusWon");
-
+        statusBox.classList.add("statusWon");
       } else {
         statusText.innerHTML =
           "<p>Comp wins! Try again\t<i class='fa-solid fa-rotate-right'></i></p>";
-          statusBox.classList.add("statusLost");
-
+        statusBox.classList.add("statusLost");
       }
-      
 
       playButtons.forEach((btn) => {
         btn.style.pointerEvents = "none";
@@ -82,6 +94,7 @@ playButtons.forEach((btn) => {
       statusBox.style.cursor = "pointer";
       statusBox.classList.add("expanded");
       statusBox.addEventListener("click", () => {
+        localStorage.clear();
         location.reload();
       });
     }
