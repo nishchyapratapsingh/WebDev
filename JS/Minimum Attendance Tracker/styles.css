@@ -102,6 +102,20 @@ label {
     color: red;
 }
 
+.footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    height: 10vh;
+    background-color: #AF1B3F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #CCB69B;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
 @media (max-width: 768px) {
     .header {
         width: 100%;
@@ -109,7 +123,7 @@ label {
     }
 
     .workArea {
-        height: 70vh;
+        height: 65vh;
     }
 
     .outerBox {
@@ -136,6 +150,10 @@ label {
 
     .labels {
         font-size: 1.2rem;
+    }
+
+    .footer {
+        font-size: 1rem;
     }
 }
 
