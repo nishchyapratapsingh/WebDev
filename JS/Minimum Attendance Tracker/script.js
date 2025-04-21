@@ -22,8 +22,18 @@ calcBtn.addEventListener("click", () => {
     document.querySelector(".resultClasses").classList.remove("error");
 
     let result = Math.trunc(attendedClasses / percentage - totalClasses);
-    document.querySelector(
-      ".resultClasses"
-    ).innerHTML = `You can leave ${result} classes <i class='fa-solid fa-rotate-right'></i>`;
+
+    if (result >= 0) {
+      document.querySelector(
+        ".resultClasses"
+      ).innerHTML = `You can leave ${result} classes <i class='fa-solid fa-rotate-right'></i>`;
+    } else {
+      document.querySelector(".resultClasses").classList.add("error");
+
+
+      document.querySelector(
+        ".resultClasses"
+      ).innerHTML = `You need to attend more classes <i class='fa-solid fa-rotate-right'></i>`;
+    }
   }
 });
