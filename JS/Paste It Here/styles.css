@@ -1,0 +1,92 @@
+body {
+  font-family: "Inter", sans-serif;
+  background-color: black;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Poppins", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: black;
+  text-align: center;
+  padding: 10px;
+  color: white;
+  font-size: 1.9rem;
+}
+
+.headerBox {
+    position: relative;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 80vw;
+    margin-left: 10vw;
+    gap: 15px;
+}
+
+.headerButtons {
+    position:absolute;
+    display: flex;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    
+}
+
+.searchValue {
+    padding: 10px;
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    resize: none;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.headerBox i{
+    font-size: 3rem;
+    color: white;
+    cursor: pointer;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  gap: 20px;
+  width: 80vw;
+  position: fixed;
+  left: 10vw;
+  margin-top: 10px;
+}
+
+.side-bar {
+  width: 20%;
+  border: 6px solid white;
+  height: 100%;
+  border-radius: 10px;
+  background-color: #03001C;
+
+}
+
+.habitCards {
+  width: 80%;
+  border: 6px solid white;
+  height: 100%;
+  background-color: #03001C;
+
+  border-radius: 10px;
+
+}
