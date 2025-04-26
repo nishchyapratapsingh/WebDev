@@ -26,39 +26,38 @@ header {
 }
 
 .headerBox {
-    position: relative;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    width: 80vw;
-    margin-left: 10vw;
-    gap: 15px;
+  position: relative;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 80vw;
+  margin-left: 10vw;
+  gap: 15px;
 }
 
 .headerButtons {
-    position:absolute;
-    display: flex;
-    right: 0;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    
+  position: absolute;
+  display: flex;
+  right: 0;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 
 .searchValue {
-    padding: 10px;
-    width: 200px;
-    height: 35px;
-    border-radius: 5px;
-    resize: none;
-    font-size: 1.2rem;
-    line-height: 1.5;
+  padding: 10px;
+  width: 200px;
+  height: 35px;
+  border-radius: 5px;
+  resize: none;
+  font-size: 1.2rem;
+  line-height: 1.5;
 }
 
-.headerBox i{
-    font-size: 2.5rem;
-    color: white;
-    cursor: pointer;
+.headerBox i {
+  font-size: 2.5rem;
+  color: white;
+  cursor: pointer;
 }
 .container {
   display: flex;
@@ -77,11 +76,9 @@ header {
   border: 6px solid white;
   height: 100%;
   border-radius: 10px;
-  background-color: #03001C;
+  background-color: #03001c;
   display: flex;
   flex-direction: column;
-
-
 }
 
 .headingSideBar {
@@ -89,7 +86,6 @@ header {
   color: white;
   text-align: center;
   padding-top: 10px;
-
 }
 
 .pasteList {
@@ -112,28 +108,27 @@ header {
   border: 2px solid white;
   border-radius: 4px;
   flex-shrink: 0;
+  cursor: pointer;
 }
 
 .pasteCards {
   width: 80%;
   border: 6px solid white;
   height: 100%;
-  background-color: #03001C;
+  background-color: #03001c;
 
   border-radius: 10px;
-
 }
 
-.addButton:hover{
+.addButton:hover {
   transform: scale(1.1);
   transform: translateY(-3px);
 }
 
-.searchButton:hover{
+.searchButton:hover {
   transform: scale(1.1);
   transform: translateY(-3px);
 }
-
 
 .notes-header {
   display: flex;
@@ -141,7 +136,6 @@ header {
   align-items: center;
   margin-bottom: 20px;
 }
-
 
 .pasteCards {
   display: flex;
