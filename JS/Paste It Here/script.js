@@ -1,14 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const addNoteBtn = document.querySelector(".addButton");
-    const notesContainer = document.querySelector(".pasteCards");
-  
-    addNoteBtn.addEventListener("click", () => {
-      const noteCard = document.createElement("div");
-      noteCard.className = "note-card";
-  
-      const timestamp = new Date().toLocaleString();
-  
-      noteCard.innerHTML = `
+  const addNoteBtn = document.querySelector(".addButton");
+  const notesContainer = document.querySelector(".pasteCards");
+
+  addNoteBtn.addEventListener("click", () => {
+    const noteCard = document.createElement("div");
+    noteCard.className = "note-card";
+
+    const timestamp = new Date().toLocaleString();
+
+    noteCard.innerHTML = `
           <h3 class="note-title">New Note</h3>
           <p class="note-content">Write something here...</p>
           <div class="note-footer">
@@ -19,38 +19,45 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
           </div>
         `;
-  
-      notesContainer.prepend(noteCard);
-  
-      const editButton = noteCard.querySelector(".edit-note");
-      const deleteButton = noteCard.querySelector(".delete-note");
-  
-      // Edit functionality
-      editButton.addEventListener("click", () => {
-        const noteHeading = noteCard.querySelector(".note-title");
-        const noteContent = noteCard.querySelector(".note-content");
-        const currentContent = noteContent.innerText;
-        const currentTitle = noteHeading.innerText;
-  
-        if (noteContent.querySelector("textarea")) {
-          const newContent = noteContent.querySelector("textarea").value;
-          const newTitle = noteHeading.querySelector("textarea").value;
-          noteHeading.innerHTML = newTitle;
-          noteContent.innerHTML = newContent;
-          editButton.innerText = "✏️ Edit";
-        } else {
-          // Change the content to a textarea for editing
-          noteHeading.innerHTML = `<textarea class="edit-textarea">${currentTitle}</textarea>`;
-          noteContent.innerHTML = `<textarea class="edit-textarea">${currentContent}</textarea>`;
-          editButton.innerText = "💾 Save";
-        }
-      });
-  
-      // Delete functionality
-      deleteButton.addEventListener("click", () => {
-        // Remove the note card 
-        noteCard.remove();
-      });
+
+    notesContainer.prepend(noteCard);
+
+    const pasteListCard = document.createElement("div");
+    pasteListCard.className = "pasteListSidebar";
+
+    pasteListCard.innerHTML = `<h4>${
+      document.querySelector(".note-title").innerText
+    }</h4>`;
+    document.querySelector(".pasteList").prepend(pasteListCard);
+
+    const editButton = noteCard.querySelector(".edit-note");
+    const deleteButton = noteCard.querySelector(".delete-note");
+
+    // Edit functionality
+    editButton.addEventListener("click", () => {
+      const noteHeading = noteCard.querySelector(".note-title");
+      const noteContent = noteCard.querySelector(".note-content");
+      const currentContent = noteContent.innerText;
+      const currentTitle = noteHeading.innerText;
+
+      if (noteContent.querySelector("textarea")) {
+        const newContent = noteContent.querySelector("textarea").value;
+        const newTitle = noteHeading.querySelector("textarea").value;
+        pasteListCard.innerHTML = `<h4>${newTitle}</h4>`;
+        noteHeading.innerHTML = newTitle;
+        noteContent.innerHTML = newContent;
+        editButton.innerText = "✏️ Edit";
+      } else {
+        // Change the content to a textarea for editing
+        noteHeading.innerHTML = `<textarea maxlength="30" class="edit-textarea">${currentTitle}</textarea>`;
+        noteContent.innerHTML = `<textarea class="edit-textarea">${currentContent}</textarea>`;
+        editButton.innerText = "💾 Save";
+      }
+    });
+
+    // Delete functionality
+    deleteButton.addEventListener("click", () => {
+      noteCard.remove();
     });
   });
-  
+});

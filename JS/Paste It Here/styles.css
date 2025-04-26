@@ -78,7 +78,40 @@ header {
   height: 100%;
   border-radius: 10px;
   background-color: #03001C;
+  display: flex;
+  flex-direction: column;
 
+
+}
+
+.headingSideBar {
+  height: 10%;
+  color: white;
+  text-align: center;
+  padding-top: 10px;
+
+}
+
+.pasteList {
+  padding: 10px;
+  height: 90%;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+}
+
+.pasteListSidebar {
+  overflow-x: hidden;
+  background-color: black;
+  padding: 3px;
+  color: white;
+  height: auto;
+  width: 98%;
+  border: 2px solid white;
+  border-radius: 4px;
+  flex-shrink: 0;
 }
 
 .pasteCards {
