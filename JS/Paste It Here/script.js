@@ -47,6 +47,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const viewButton = noteCard.querySelector(".fa-eye");
 
     // Edit functionality
+    noteCard.querySelector(".note-title").addEventListener("click", () => {
+      noteCard.querySelector(".note-content").click();
+    });
 
     noteCard.querySelector(".note-content").addEventListener("click", () => {
       const noteContent = noteCard.querySelector(".note-content");
@@ -90,11 +93,15 @@ document.addEventListener("DOMContentLoaded", () => {
     viewButton.addEventListener("click", () => {
       if (!statusViewButton) {
         noteCard.classList.add("maximizeCard");
-        noteCard.querySelector(".note-content").classList.add("noteContentHeight");
+        noteCard
+          .querySelector(".note-content")
+          .classList.add("noteContentHeight");
         statusViewButton = 1;
       } else {
         noteCard.classList.remove("maximizeCard");
-        noteCard.querySelector(".note-content").classList.remove("noteContentHeight");
+        noteCard
+          .querySelector(".note-content")
+          .classList.remove("noteContentHeight");
         statusViewButton = 0;
       }
     });
