@@ -171,11 +171,10 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
-  overflow-y: auto;
-  max-height: 150px;
-  max-width: 30%;
+  max-height: 155px;
+  max-width: 31%;
   width: 100%;
+  height: 100%;
 }
 
 .note-title {
@@ -185,6 +184,9 @@ header {
 }
 
 .note-content {
+  overflow-y: auto;
+  min-height: 30%;
+  overflow-x: hidden;
   font-size: 0.9rem;
   margin-bottom: 15px;
   color: #ccc;
@@ -211,6 +213,23 @@ header {
 
 .note-actions button:hover {
   color: #fff;
+}
+
+.edit-textarea1 {
+  padding: 2px;
+  width: 100%;
+}
+
+.edit-textarea2 {
+  padding: 2px;
+  height: 90%;
+  width: 100%;
+  resize: none;
+}
+
+.noteContentHeight {
+  min-height: 75% !important; 
+  overflow-x: auto !important;
 }
 
 .maximizeCard {

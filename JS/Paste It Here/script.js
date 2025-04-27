@@ -46,9 +46,17 @@ document.addEventListener("DOMContentLoaded", () => {
     const deleteButton = noteCard.querySelector(".delete-note");
     const viewButton = noteCard.querySelector(".fa-eye");
 
-
     // Edit functionality
-    editButton.addEventListener("click", () => {
+
+    noteCard.querySelector(".note-content").addEventListener("click", () => {
+      const noteContent = noteCard.querySelector(".note-content");
+      if (!noteContent.querySelector("textarea")) {
+        editButton.click();
+      }
+    });
+
+    editButton.addEventListener("click", editButtonFunc);
+    function editButtonFunc() {
       const noteHeading = noteCard.querySelector(".note-title");
       const noteContent = noteCard.querySelector(".note-content");
       const currentContent = noteContent.innerText;
@@ -58,8 +66,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const newContent = noteContent.querySelector("textarea").value;
         const newTitle = noteHeading.querySelector("textarea").value;
         pasteListCard.innerHTML = `<h4>${newTitle}</h4>`;
-        note.title=newTitle;
-        note.content=newContent;
+        note.title = newTitle;
+        note.content = newContent;
         note.timestamp = new Date().toLocaleString();
         noteHeading.innerText = newTitle;
         noteContent.innerText = newContent;
@@ -67,28 +75,29 @@ document.addEventListener("DOMContentLoaded", () => {
           ".timestamp"
         ).innerHTML = `${new Date().toLocaleString()}`;
         updateNotesInLocalStorage();
-        editButton.innerText = "✏️ Edit";
+        editButton.innerText = "✏️";
       } else {
         // Change the content to a textarea for editing
-        noteHeading.innerHTML = `<textarea maxlength="30" class="edit-textarea">${currentTitle}</textarea>`;
-        noteContent.innerHTML = `<textarea class="edit-textarea">${currentContent}</textarea>`;
-        editButton.innerText = "💾 Save";
+        noteHeading.innerHTML = `<textarea maxlength="30" class="edit-textarea1">${currentTitle}</textarea>`;
+        noteContent.innerHTML = `<textarea class="edit-textarea2">${currentContent}</textarea>`;
+        editButton.innerText = "💾";
       }
-    });
+    }
 
     //View functionality
     let statusViewButton = 0;
-    //this never hit my mind before 
-    viewButton.addEventListener("click", ()=> {
+    //this never hit my mind before
+    viewButton.addEventListener("click", () => {
       if (!statusViewButton) {
         noteCard.classList.add("maximizeCard");
-        statusViewButton=1;
-      }
-      else {
+        noteCard.querySelector(".note-content").classList.add("noteContentHeight");
+        statusViewButton = 1;
+      } else {
         noteCard.classList.remove("maximizeCard");
-        statusViewButton=0;
+        noteCard.querySelector(".note-content").classList.remove("noteContentHeight");
+        statusViewButton = 0;
       }
-    })
+    });
     // viewButton.addEventListener("click", ()=>{
     //   viewCard.innerHTML= `<h2 class="note-title">${note.title}</h2><i style="color: red;" class="fa-solid fa-xmark"></i>
     //       <p class="note-content">${note.content}</p>
@@ -109,7 +118,7 @@ document.addEventListener("DOMContentLoaded", () => {
     //     const noteContent = viewCard.querySelector(".note-content");
     //     const currentContent = noteContent.innerText;
     //     const currentTitle = noteHeading.innerText;
-  
+
     //     if (noteContent.querySelector("textarea")) {
     //       const newContent = noteContent.querySelector("textarea").value;
     //       const newTitle = noteHeading.querySelector("textarea").value;
@@ -131,7 +140,7 @@ document.addEventListener("DOMContentLoaded", () => {
     //       editButton.innerText = "💾 Save";
     //     }
     //   });
-  
+
     // })
     //pasteCards - overflow y to hidden and pasteView display to block
 
