@@ -77,51 +77,62 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     //View functionality
-    let viewCard = document.querySelector(".pasteView");
-    viewButton.addEventListener("click", ()=>{
-      viewCard.innerHTML= `<h2 class="note-title">${note.title}</h2><i style="color: red;" class="fa-solid fa-xmark"></i>
-          <p class="note-content">${note.content}</p>
-          <div class="note-footer">
-            <span class="timestamp">${note.timestamp}</span>
-            <div class="note-actions">
-              <button class="edit-note">✏️</button>
-              <button class="delete-note">🗑️</button>
-            </div>
-          </div>`;
-      viewCard.style.display = "block";
-      document.querySelector(".pasteCards").style.overflowY = "hidden";
-
-      const editButton = viewCard.querySelector(".edit-button");
-
-      editButton.addEventListener("click", () => {
-        const noteHeading = viewCard.querySelector(".note-title");
-        const noteContent = viewCard.querySelector(".note-content");
-        const currentContent = noteContent.innerText;
-        const currentTitle = noteHeading.innerText;
-  
-        if (noteContent.querySelector("textarea")) {
-          const newContent = noteContent.querySelector("textarea").value;
-          const newTitle = noteHeading.querySelector("textarea").value;
-          pasteListCard.innerHTML = `<h4>${newTitle}</h4>`;
-          note.title=newTitle;
-          note.content=newContent;
-          note.timestamp = new Date().toLocaleString();
-          noteHeading.innerText = newTitle;
-          noteContent.innerText = newContent;
-          noteCard.querySelector(
-            ".timestamp"
-          ).innerHTML = `${new Date().toLocaleString()}`;
-          updateNotesInLocalStorage();
-          editButton.innerText = "✏️ Edit";
-        } else {
-          // Change the content to a textarea for editing
-          noteHeading.innerHTML = `<textarea maxlength="30" class="edit-textarea">${currentTitle}</textarea>`;
-          noteContent.innerHTML = `<textarea class="edit-textarea">${currentContent}</textarea>`;
-          editButton.innerText = "💾 Save";
-        }
-      });
-  
+    let statusViewButton = 0;
+    //this never hit my mind before 
+    viewButton.addEventListener("click", ()=> {
+      if (!statusViewButton) {
+        noteCard.classList.add("maximizeCard");
+        statusViewButton=1;
+      }
+      else {
+        noteCard.classList.remove("maximizeCard");
+        statusViewButton=0;
+      }
     })
+    // viewButton.addEventListener("click", ()=>{
+    //   viewCard.innerHTML= `<h2 class="note-title">${note.title}</h2><i style="color: red;" class="fa-solid fa-xmark"></i>
+    //       <p class="note-content">${note.content}</p>
+    //       <div class="note-footer">
+    //         <span class="timestamp">${note.timestamp}</span>
+    //         <div class="note-actions">
+    //           <button class="edit-note">✏️</button>
+    //           <button class="delete-note">🗑️</button>
+    //         </div>
+    //       </div>`;
+    //   viewCard.style.display = "block";
+    //   document.querySelector(".pasteCards").style.overflowY = "hidden";
+
+    //   const editButton = viewCard.querySelector(".edit-button");
+
+    //   editButton.addEventListener("click", () => {
+    //     const noteHeading = viewCard.querySelector(".note-title");
+    //     const noteContent = viewCard.querySelector(".note-content");
+    //     const currentContent = noteContent.innerText;
+    //     const currentTitle = noteHeading.innerText;
+  
+    //     if (noteContent.querySelector("textarea")) {
+    //       const newContent = noteContent.querySelector("textarea").value;
+    //       const newTitle = noteHeading.querySelector("textarea").value;
+    //       pasteListCard.innerHTML = `<h4>${newTitle}</h4>`;
+    //       note.title=newTitle;
+    //       note.content=newContent;
+    //       note.timestamp = new Date().toLocaleString();
+    //       noteHeading.innerText = newTitle;
+    //       noteContent.innerText = newContent;
+    //       noteCard.querySelector(
+    //         ".timestamp"
+    //       ).innerHTML = `${new Date().toLocaleString()}`;
+    //       updateNotesInLocalStorage();
+    //       editButton.innerText = "✏️ Edit";
+    //     } else {
+    //       // Change the content to a textarea for editing
+    //       noteHeading.innerHTML = `<textarea maxlength="30" class="edit-textarea">${currentTitle}</textarea>`;
+    //       noteContent.innerHTML = `<textarea class="edit-textarea">${currentContent}</textarea>`;
+    //       editButton.innerText = "💾 Save";
+    //     }
+    //   });
+  
+    // })
     //pasteCards - overflow y to hidden and pasteView display to block
 
     // Delete functionality
