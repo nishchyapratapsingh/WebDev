@@ -62,12 +62,10 @@ header {
 .container {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   height: 70vh;
-  gap: 20px;
   width: 80vw;
-  position: fixed;
-  left: 10vw;
+  margin-left: 10vw;
   margin-top: 10px;
 }
 
@@ -113,12 +111,33 @@ header {
 }
 
 .pasteCards {
-  width: 80%;
+  width: 78%;
   border: 6px solid white;
   height: 100%;
   background-color: #03001c;
-
+  position: relative;
   border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 10px;
+  padding-left: 30px;
+  padding-top: 20px;
+  overflow-y: auto;
+  flex-shrink: 0;
+  flex : 0 0 78%;
+}
+
+.pasteView {
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 10;
+  height: 100%;
+  width: 100%;
+  background-color: #03001c;
+  padding: 10px;
+  display: none;
 }
 
 .addButton:hover {
@@ -138,27 +157,21 @@ header {
   margin-bottom: 20px;
 }
 
-.pasteCards {
+.viewButton {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 10px;
-  padding-left: 30px;
-  padding-top: 20px;
-  overflow-y: auto;
+  justify-content: space-between;
 }
 
 .note-card {
   background-color: black;
   padding: 15px;
-  height: 150px;
   border-radius: 10px;
 
   border: 1px solid #666;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  max-width: 40%;
+
   overflow-y: auto;
   max-height: 150px;
   max-width: 30%;
