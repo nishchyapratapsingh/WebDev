@@ -178,6 +178,7 @@ header {
 }
 
 .note-title {
+  width: 100%;
   font-size: 1.1rem;
   color: white;
   margin-bottom: 10px;
@@ -216,11 +217,15 @@ header {
 }
 
 .edit-textarea1 {
+  border-radius: 5px;
   padding: 2px;
-  width: 100%;
+  width: 95%;
+  resize: none;
+  /* font-size: 1.4rem; */
 }
 
 .edit-textarea2 {
+  border-radius: 5px;
   padding: 2px;
   height: 90%;
   width: 100%;
