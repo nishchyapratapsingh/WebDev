@@ -28,11 +28,18 @@ const onClickTitleCaseHandler = (text, setText) => {
   setText(newText);
 };
 
+const onClickCopyHandler = (text) => {
+    let elem = document.getElementById("myTextBox");
+    elem.select();
+    navigator.clipboard.writeText(elem.value);  
+}
+
 export default {
   onClickUppercaseHandler,
   onClickLowercaseHandler,
   onClickClearHandler,
   onChangeHandler,
   onClickSentCaseHandler,
-  onClickTitleCaseHandler
+  onClickTitleCaseHandler,
+  onClickCopyHandler
 };

@@ -12,7 +12,7 @@ export default function TextArea(props) {
           <textarea
             value={text}
             className="form-control"
-            id="exampleFormControlTextarea1"
+            id="myTextBox"
             rows="8"
             onChange={(e) => buttons.onChangeHandler(e, setText)}
           ></textarea>
@@ -71,6 +71,15 @@ export default function TextArea(props) {
           onClick={() => buttons.onClickClearHandler(setText)}
         >
           Clear text
+        </button>
+
+        {/* Copy button */}
+        <button
+          type="button"
+          className="btn btn-success m-1"
+          onClick={() => buttons.onClickCopyHandler(text)}
+        >
+          Copy
         </button>
       </div>
 
