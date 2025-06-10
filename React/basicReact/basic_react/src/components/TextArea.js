@@ -6,12 +6,17 @@ export default function TextArea(props) {
 
   return (
     <>
-      <div className="container">
+      <div
+        className={`container text-${
+          props.mode === "light" ? "dark" : "light"
+        }`}
+      >
         <h1>{props.heading}</h1>
         <div className="mb-3">
           <textarea
+            style={{backgroundColor: props.mode==="light"?"white":"grey", color:props.mode==="light"?"black":"white" }}
             value={text}
-            className="form-control"
+            className="form-control my-1"
             id="myTextBox"
             rows="8"
             onChange={(e) => buttons.onChangeHandler(e, setText)}
@@ -84,7 +89,11 @@ export default function TextArea(props) {
       </div>
 
       {/* Summary */}
-      <div className="container my-3">
+      <div
+        className={`container my-3 text-${
+          props.mode === "light" ? "dark" : "light"
+        }`}
+      >
         <h2>Your text summary</h2>
         <p>
           {text.trim() === "" ? 0 : text.trim().split(" ").length} words,{" "}
@@ -92,7 +101,7 @@ export default function TextArea(props) {
         </p>
         <p>
           {(
-            (text.trim() === "" ? 0 : text.trim().split(" ").length) * 0.003
+            (text.trim() === "" ? 0 : text.trim().split(" ").length) * 0.005
           ).toFixed(3)}{" "}
           minutes read{" "}
         </p>
