@@ -16,15 +16,34 @@ function App() {
       document.body.style.backgroundColor = "white";
     }
   };
+
+  //Alert State
+  const [alert, setalert] = useState(null);
+  const showAlert = (message, type) => {
+    //alert is an object
+    setalert({
+      message: message,
+      type: type,
+    });
+
+    setTimeout(() => {
+      setalert(null);
+    }, 1500);
+  };
+
   return (
     <>
       {/* Navbar */}
       <Navbar mode={mode} toggleMode={toggleMode} />
       {/* Alerts */}
-      <Alert alertText = "This is alert"/>
+      <Alert alert={alert} />
       {/* Text area */}
       <div className="container my-3">
-        <TextArea heading="Enter your text here" mode={mode} />
+        <TextArea
+          heading="Enter your text here"
+          mode={mode}
+          showAlert={showAlert}
+        />
       </div>
     </>
   );

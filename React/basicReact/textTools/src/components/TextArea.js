@@ -40,7 +40,10 @@ export default function TextArea(props) {
             <li>
               <button
                 className="dropdown-item"
-                onClick={() => buttons.onClickUppercaseHandler(text, setText)}
+                onClick={() => {
+                  buttons.onClickUppercaseHandler(text, setText);
+                  props.showAlert("The text is now in UPPERCASE", "success");
+                }}
               >
                 UPPERCASE
               </button>
@@ -48,7 +51,7 @@ export default function TextArea(props) {
             <li>
               <button
                 className="dropdown-item"
-                onClick={() => buttons.onClickLowercaseHandler(text, setText)}
+                onClick={() => {buttons.onClickLowercaseHandler(text, setText);props.showAlert("The text is now in lowercase", "success");}}
               >
                 lowercase
               </button>
@@ -56,7 +59,7 @@ export default function TextArea(props) {
             <li>
               <button
                 className="dropdown-item"
-                onClick={() => buttons.onClickSentCaseHandler(text, setText)}
+                onClick={() => {buttons.onClickSentCaseHandler(text, setText);props.showAlert("The text is now in Sentence case", "success");}}
               >
                 Sentence case
               </button>
@@ -64,7 +67,7 @@ export default function TextArea(props) {
             <li>
               <button
                 className="dropdown-item"
-                onClick={() => buttons.onClickTitleCaseHandler(text, setText)}
+                onClick={() => {buttons.onClickTitleCaseHandler(text, setText);props.showAlert("The text is now in Title Case", "success");}}
               >
                 Title Case
               </button>
@@ -76,7 +79,7 @@ export default function TextArea(props) {
         <button
           type="button"
           className="btn btn-danger m-1"
-          onClick={() => buttons.onClickClearHandler(setText)}
+          onClick={() => {buttons.onClickClearHandler(setText);props.showAlert("All text cleared", "warning");}}
         >
           Clear text
         </button>
@@ -85,7 +88,7 @@ export default function TextArea(props) {
         <button
           type="button"
           className="btn btn-success m-1"
-          onClick={() => buttons.onClickCopyHandler(text)}
+          onClick={() => buttons.onClickCopyHandler(text, props.showAlert)}
         >
           Copy
         </button>

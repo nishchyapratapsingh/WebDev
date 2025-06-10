@@ -28,13 +28,14 @@ const onClickTitleCaseHandler = (text, setText) => {
   setText(newText);
 };
 
-const onClickCopyHandler = async (text) => {
+const onClickCopyHandler = async (text, showAlert) => {
   try {
     // Check if Clipboard API is supported
     if (!navigator.clipboard) {
+      showAlert("Clipboard API not supported", "danger");
       throw new Error("Clipboard API not supported");
     }
-    await navigator.clipboard.writeText(text);
+    await navigator.clipboard.writeText(text); showAlert("The text is copied", "success");
   } catch (err) {
     console.error("Failed to copy text: ", err);
   }
