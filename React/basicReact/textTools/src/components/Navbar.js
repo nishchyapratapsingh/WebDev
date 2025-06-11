@@ -40,6 +40,7 @@ export default function Navbar(props) {
               type="checkbox"
               role="switch"
               id="switchCheckDefault"
+              style={{cursor: "pointer"}}
             />
             {`${props.mode==="light"?"Enable Dark Mode":"Disable Dark Mode"}`}
           </div>
