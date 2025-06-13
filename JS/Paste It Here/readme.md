@@ -18,7 +18,7 @@
 ## 📦 How to Use
 
 1. Clone the repo:
-   ```bash
+   ````
    git clone https://github.com/your-username/paste-it-here.git
    cd paste-it-here
 ````
