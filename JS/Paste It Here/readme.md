@@ -1,8 +1,4 @@
-Here’s a quick and clean **README.md** for your **"Paste It Here"** clipboard-style notes app:
 
----
-
-````markdown
 # 📋 Paste It Here
 
 **Paste It Here** is a simple, minimalistic clipboard-style notes app that lets you quickly paste, edit, and copy text. Ideal for quick thoughts, links, or temporary notes.
