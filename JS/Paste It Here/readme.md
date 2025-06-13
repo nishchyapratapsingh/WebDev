@@ -13,17 +13,16 @@
 ## 🛠️ Tech Stack
 
 - HTML5, CSS3, JavaScript
-- (Optional) React (if applicable)
 
 ## 📦 How to Use
 
 1. Clone the repo:
    ````
-   git clone https://github.com/your-username/paste-it-here.git
+   git clone https://github.com/nishchyapratapsingh/paste-it-here.git
    cd paste-it-here
    ````
 
-2. Open `index.html` in your browser (or run a live server if using React).
+2. Open `index.html` in your browser.
 
 3. Start pasting and managing your text!
 
