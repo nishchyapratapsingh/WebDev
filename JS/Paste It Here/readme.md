@@ -21,7 +21,7 @@
    ````
    git clone https://github.com/your-username/paste-it-here.git
    cd paste-it-here
-````
+   ````
 
 2. Open `index.html` in your browser (or run a live server if using React).
 
