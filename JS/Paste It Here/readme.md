@@ -18,8 +18,9 @@
 
 1. Clone the repo:
    ````
-   git clone https://github.com/nishchyapratapsingh/paste-it-here.git
-   cd paste-it-here
+   git clone https://github.com/nishchyapratapsingh/WebDev.git
+   cd WebDev/JS/Paste\ It\ Here
+
    ````
 
 2. Open `index.html` in your browser.
