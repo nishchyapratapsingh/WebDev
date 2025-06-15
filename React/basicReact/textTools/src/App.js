@@ -2,7 +2,9 @@ import "./App.css";
 import Alert from "./components/Alert";
 import Navbar from "./components/Navbar";
 import TextArea from "./components/TextArea";
+import About from "./components/About";
 import React, { useState } from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 function App() {
   // Dark Mode
@@ -33,18 +35,29 @@ function App() {
 
   return (
     <>
-      {/* Navbar */}
-      <Navbar mode={mode} toggleMode={toggleMode} />
-      {/* Alerts */}
-      <Alert alert={alert} />
-      {/* Text area */}
-      <div className="container my-3">
-        <TextArea
-          heading="Enter your text here"
-          mode={mode}
-          showAlert={showAlert}
-        />
-      </div>
+      <Router>
+        {/* Navbar */}
+        <Navbar mode={mode} toggleMode={toggleMode} />
+        {/* Alerts */}
+        <Alert alert={alert} />
+        {/* Content */}
+        <div className="container my-3">
+          <Routes>
+            <Route
+              exact
+              path="/"
+              element={
+                <TextArea
+                  heading="Enter your text here"
+                  mode={mode}
+                  showAlert={showAlert}
+                />
+              }
+            ></Route>
+            <Route exact path="/about" element={<About />}></Route>
+          </Routes>
+        </div>
+      </Router>
     </>
   );
 }
