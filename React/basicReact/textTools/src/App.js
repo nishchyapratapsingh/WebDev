@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar";
 import TextArea from "./components/TextArea";
 import About from "./components/About";
 import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   // Dark Mode
@@ -54,7 +54,7 @@ function App() {
                 />
               }
             ></Route>
-            <Route exact path="/about" element={<About />}></Route>
+            <Route exact path="/about" element={<About mode={mode} />}></Route>
           </Routes>
         </div>
       </Router>
