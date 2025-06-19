@@ -30,7 +30,7 @@ function App() {
 
     setTimeout(() => {
       setalert(null);
-    }, 1500);
+    }, 1000);
   };
 
   return (

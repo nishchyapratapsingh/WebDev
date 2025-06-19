@@ -29,6 +29,7 @@ export default function TextArea(props) {
         {/* Change Case buttons */}
         <div className="dropdown m-1" style={{ display: "inline-block" }}>
           <button
+            disabled={text.length === 0}
             className="btn btn-primary dropdown-toggle"
             type="button"
             data-bs-toggle="dropdown"
@@ -51,7 +52,10 @@ export default function TextArea(props) {
             <li>
               <button
                 className="dropdown-item"
-                onClick={() => {buttons.onClickLowercaseHandler(text, setText);props.showAlert("The text is now in lowercase", "success");}}
+                onClick={() => {
+                  buttons.onClickLowercaseHandler(text, setText);
+                  props.showAlert("The text is now in lowercase", "success");
+                }}
               >
                 lowercase
               </button>
@@ -59,7 +63,13 @@ export default function TextArea(props) {
             <li>
               <button
                 className="dropdown-item"
-                onClick={() => {buttons.onClickSentCaseHandler(text, setText);props.showAlert("The text is now in Sentence case", "success");}}
+                onClick={() => {
+                  buttons.onClickSentCaseHandler(text, setText);
+                  props.showAlert(
+                    "The text is now in Sentence case",
+                    "success"
+                  );
+                }}
               >
                 Sentence case
               </button>
@@ -67,7 +77,10 @@ export default function TextArea(props) {
             <li>
               <button
                 className="dropdown-item"
-                onClick={() => {buttons.onClickTitleCaseHandler(text, setText);props.showAlert("The text is now in Title Case", "success");}}
+                onClick={() => {
+                  buttons.onClickTitleCaseHandler(text, setText);
+                  props.showAlert("The text is now in Title Case", "success");
+                }}
               >
                 Title Case
               </button>
@@ -77,15 +90,20 @@ export default function TextArea(props) {
 
         {/* Clear text button */}
         <button
+          disabled={text.length === 0}
           type="button"
           className="btn btn-danger m-1"
-          onClick={() => {buttons.onClickClearHandler(setText);props.showAlert("All text cleared", "warning");}}
+          onClick={() => {
+            buttons.onClickClearHandler(setText);
+            props.showAlert("All text cleared", "warning");
+          }}
         >
           Clear text
         </button>
 
         {/* Copy button */}
         <button
+          disabled={text.length === 0}
           type="button"
           className="btn btn-success m-1"
           onClick={() => buttons.onClickCopyHandler(text, props.showAlert)}
@@ -112,7 +130,7 @@ export default function TextArea(props) {
           minutes read{" "}
         </p>
         <h2>Preview</h2>
-        <p>{text}</p>
+        <p>{text.length>0? text:"Nothing to preview"}</p>
       </div>
     </>
   );
