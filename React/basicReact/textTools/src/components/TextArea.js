@@ -120,17 +120,17 @@ export default function TextArea(props) {
       >
         <h2>Your text summary</h2>
         <p>
-          {text.trim() === "" ? 0 : text.trim().split(" ").length} words,{" "}
+          {text.trim() === "" ? 0 : text.trim().split(/\s+/).length} words,{" "}
           {text.length} characters
         </p>
         <p>
           {(
-            (text.trim() === "" ? 0 : text.trim().split(" ").length) * 0.005
+            (text.trim() === "" ? 0 : text.trim().split(/\s+/).length) * 0.005
           ).toFixed(3)}{" "}
           minutes read{" "}
         </p>
         <h2>Preview</h2>
-        <p>{text.length>0? text:"Nothing to preview"}</p>
+        <p>{text.length > 0 ? text : "Nothing to preview"}</p>
       </div>
     </>
   );

@@ -30,17 +30,19 @@ const onClickTitleCaseHandler = (text, setText) => {
 
 const onClickCopyHandler = async (text, showAlert) => {
   try {
-    // Check if Clipboard API is supported
     if (!navigator.clipboard) {
       showAlert("Clipboard API not supported", "danger");
       throw new Error("Clipboard API not supported");
     }
-    await navigator.clipboard.writeText(text); showAlert("The text is copied", "success");
+    await navigator.clipboard.writeText(text);
+    showAlert("The text is copied", "success");
   } catch (err) {
     console.error("Failed to copy text: ", err);
   }
 };
-export default {
+
+// ✅ Assign to a named variable before export
+const handlers = {
   onClickUppercaseHandler,
   onClickLowercaseHandler,
   onClickClearHandler,
@@ -49,3 +51,5 @@ export default {
   onClickTitleCaseHandler,
   onClickCopyHandler,
 };
+
+export default handlers;
