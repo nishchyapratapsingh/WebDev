@@ -1,6 +1,13 @@
 export default function About(props) {
+  const arrowStyle = `
+  .accordion-button::after {
+    filter: ${props.mode === "dark" ? "invert(1)" : "none"};
+    transition: filter 0.3s ease;
+  }
+`;
   return (
     <>
+      <style>{arrowStyle}</style>
       <div className="accordion" id="accordionExample">
         <div className="accordion-item">
           <h2 className="accordion-header">
@@ -16,16 +23,13 @@ export default function About(props) {
                 color: props.mode === "light" ? "black" : "white",
               }}
             >
-              Accordion Item #1
+              About TextTools
             </button>
           </h2>
           <div
             id="collapseOne"
             className="accordion-collapse collapse show"
             data-bs-parent="#accordionExample"
-            style={{
-              color: props.mode === "light" ? "black" : "white",
-            }}
           >
             <div
               className="accordion-body"
@@ -34,14 +38,10 @@ export default function About(props) {
                 color: props.mode === "light" ? "black" : "white",
               }}
             >
-              <strong>This is the first item’s accordion body.</strong> It is
-              shown by default, until the collapse plugin adds the appropriate
-              classes that we use to style each element. These classes control
-              the overall appearance, as well as the showing and hiding via CSS
-              transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It’s also worth noting that just
-              about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
+              TextTools is a simple and useful text processing web app built
+              using <strong>React JS</strong>. It allows users to perform basic
+              text operations quickly and efficiently. This project is part of
+              my learning journey in web development and React.
             </div>
           </div>
         </div>
@@ -59,7 +59,7 @@ export default function About(props) {
                 color: props.mode === "light" ? "black" : "white",
               }}
             >
-              Accordion Item #2
+              Features and Functionality
             </button>
           </h2>
           <div
@@ -74,14 +74,24 @@ export default function About(props) {
                 color: props.mode === "light" ? "black" : "white",
               }}
             >
-              <strong>This is the second item’s accordion body.</strong> It is
-              hidden by default, until the collapse plugin adds the appropriate
-              classes that we use to style each element. These classes control
-              the overall appearance, as well as the showing and hiding via CSS
-              transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It’s also worth noting that just
-              about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
+              TextTools offers the following features:
+              <ul>
+                <li>
+                  🔠 <strong>Change Text Case</strong> - Convert text to
+                  uppercase, lowercase, sentence case or title case instantly.
+                </li>{" "}
+                <li>
+                  📋 <strong>Copy to Clipboard </strong>– Easily copy your
+                  edited text with one click.
+                </li>{" "}
+                <li>
+                  {" "}
+                  🔢<strong> Text Summary</strong> – Get quick information like
+                  word count, character count, and estimated reading time.
+                </li>
+              </ul>{" "}
+              These tools make it easier to work with plain text, especially for
+              students, writers, and developers.
             </div>
           </div>
         </div>
@@ -99,7 +109,7 @@ export default function About(props) {
                 color: props.mode === "light" ? "black" : "white",
               }}
             >
-              Accordion Item #3
+              Why I Built This Project
             </button>
           </h2>
           <div
@@ -114,14 +124,15 @@ export default function About(props) {
                 color: props.mode === "light" ? "black" : "white",
               }}
             >
-              <strong>This is the third item’s accordion body.</strong> It is
-              hidden by default, until the collapse plugin adds the appropriate
-              classes that we use to style each element. These classes control
-              the overall appearance, as well as the showing and hiding via CSS
-              transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It’s also worth noting that just
-              about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
+              I built TextTools as a part of my React JS learning. It helped me
+              understand{" "}
+              <strong>
+                {" "}
+                components, props, state, and user interaction in React
+              </strong>
+              . This project gave me hands-on experience with front-end
+              development and improved my problem-solving skills. I look forward
+              to building more useful tools as I learn and grow.
             </div>
           </div>
         </div>
