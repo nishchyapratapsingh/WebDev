@@ -36,3 +36,36 @@
     transform: rotate(360deg);
   }
 }
+
+@keyframes slideIn {
+  from {
+    transform: translate(5%, 5%);
+  }
+  to {
+    transform: translate(0, 0);
+  }
+}
+
+.anim {
+  animation: slideIn 0.5s ease-in-out ;
+}
+
+.hoverstyle:hover {
+  cursor: pointer;
+  animation: beautifulFloat 2s ease-in-out infinite;
+}
+
+@keyframes beautifulFloat {
+  0% {
+    transform: translateY(0);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
+  }
+  50% {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  }
+  100% {
+    transform: translateY(0);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
+  }
+}
