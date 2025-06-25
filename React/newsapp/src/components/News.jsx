@@ -3,7 +3,6 @@ import NewsItem from "./NewsItem";
 import APIKEY from "../apikey.mjs";
 
 export class News extends Component {
-  
   constructor() {
     super();
     this.state = {
@@ -14,7 +13,6 @@ export class News extends Component {
       catquery: "world",
     };
   }
-
 
   prevHandler = async () => {
     this.setState({ loading: true });
@@ -62,26 +60,27 @@ export class News extends Component {
   }
 
   async componentDidUpdate(prevprops) {
-    if (prevprops.query!=this.props.query){this.setState({
-      catquery:this.props.query,
-      loading:true
-    })
-    let url = `https://newsapi.org/v2/everything?q=${this.props.query}&pageSize=18&apiKey=${APIKEY}&page=${this.state.page}`;
-    let data = await fetch(url);
-    let parsedData = await data.json();
-    let totalResultsAvlb =
-      parsedData.totalResults < 100 ? parsedData.totalResults : 100;
-    console.log(url);  
-    this.setState({
-      articles: parsedData.articles,
-      loading: false,
-      totalpages: Math.ceil(totalResultsAvlb / 18) - 1,
-      page:1
-    });}
+    if (prevprops.query != this.props.query) {
+      this.setState({
+        catquery: this.props.query,
+        loading: true,
+      });
+      let url = `https://newsapi.org/v2/everything?q=${this.props.query}&pageSize=18&apiKey=${APIKEY}&page=${this.state.page}`;
+      let data = await fetch(url);
+      let parsedData = await data.json();
+      let totalResultsAvlb =
+        parsedData.totalResults < 100 ? parsedData.totalResults : 100;
+      this.setState({
+        articles: parsedData.articles,
+        loading: false,
+        totalpages: Math.ceil(totalResultsAvlb / 18) - 1,
+        page: 1,
+      });
+    }
   }
 
   render() {
-    let {query} = this.props;
+    let { query } = this.props;
     return (
       <>
         <div className="container" style={{ paddingTop: "56px" }}>
