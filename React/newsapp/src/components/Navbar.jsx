@@ -1,11 +1,14 @@
 import React, { Component } from "react";
 
 export class Navbar extends Component {
-
   render() {
+    let { querySelect } = this.props;
     return (
       <>
-        <nav className="navbar navbar-expand-lg bg-body-tertiary position-fixed" style={{zIndex: "10", width: "100%", top: "0"}}>
+        <nav
+          className="navbar navbar-expand-lg bg-body-tertiary position-fixed"
+          style={{ zIndex: "10", width: "100%", top: "0" }}
+        >
           <div className="container-fluid">
             <a className="navbar-brand" href="/">
               NewsEagle
@@ -31,8 +34,58 @@ export class Navbar extends Component {
                     Home
                   </a>
                 </li>
-                
               </ul>
+
+              <div className="nav-item dropdown mx-2">
+                <a
+                  className="nav-link dropdown-toggle"
+                  
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Categories
+                </a>
+                <ul className="dropdown-menu">
+                  <li>
+                    <a
+                      onClick={() => this.props.querySelect("Sports")}
+                      className="dropdown-item"
+                      
+                    >
+                      Sports
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      onClick={() => this.props.querySelect("Politics")}
+                      className="dropdown-item"
+                      
+                    >
+                      Politics
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      onClick={() => this.props.querySelect("Finance")}
+                      className="dropdown-item"
+                      
+                    >
+                      Finance
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      onClick={() => this.props.querySelect("Movies")}
+                      className="dropdown-item"
+                      
+                    >
+                      Movies
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
               <form className="d-flex" role="search">
                 <input
                   className="form-control me-2"

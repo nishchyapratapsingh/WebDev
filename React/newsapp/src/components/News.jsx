@@ -3,37 +3,85 @@ import NewsItem from "./NewsItem";
 import APIKEY from "../apikey.mjs";
 
 export class News extends Component {
+  
   constructor() {
     super();
     this.state = {
       articles: [],
       loading: true,
       page: 1,
-      totalpages: 0
+      totalpages: 0,
+      catquery: "world",
     };
   }
 
-  nextHandler = async() => {
-    this.setState({loading: true});
-    let url = `https://newsapi.org/v2/everything?q=animal&pageSize=18&apiKey=${APIKEY}&page=${this.state.page+1}`;
+
+  prevHandler = async () => {
+    this.setState({ loading: true });
+    let url = `https://newsapi.org/v2/everything?q=${
+      this.state.catquery
+    }&pageSize=18&apiKey=${APIKEY}&page=${this.state.page - 1}`;
     let data = await fetch(url);
     let parsedData = await data.json();
-    
 
-    this.setState({ articles: parsedData.articles, loading: false, page:this.state.page+1 });
+    this.setState({
+      articles: parsedData.articles,
+      loading: false,
+      page: this.state.page - 1,
+    });
     window.scrollTo({ top: 0, behavior: "smooth" });
-  }
+  };
+
+  nextHandler = async () => {
+    this.setState({ loading: true });
+    let url = `https://newsapi.org/v2/everything?q=${
+      this.state.catquery
+    }&pageSize=18&apiKey=${APIKEY}&page=${this.state.page + 1}`;
+    let data = await fetch(url);
+    let parsedData = await data.json();
+
+    this.setState({
+      articles: parsedData.articles,
+      loading: false,
+      page: this.state.page + 1,
+    });
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   async componentDidMount() {
-    let url = `https://newsapi.org/v2/everything?q=animal&pageSize=18&apiKey=${APIKEY}&page=${this.state.page}`;
+    let url = `https://newsapi.org/v2/everything?q=${this.state.catquery}&pageSize=18&apiKey=${APIKEY}&page=${this.state.page}`;
     let data = await fetch(url);
     let parsedData = await data.json();
-    this.setState({ articles: parsedData.articles, loading: false, totalpages: Math.ceil(parsedData.totalResults/18) });
-    console.log(this.state.totalpages);
-    console.log(parsedData.totalResults);
+    let totalResultsAvlb =
+      parsedData.totalResults < 100 ? parsedData.totalResults : 100;
+    this.setState({
+      articles: parsedData.articles,
+      loading: false,
+      totalpages: Math.ceil(totalResultsAvlb / 18) - 1,
+    });
+  }
+
+  async componentDidUpdate(prevprops) {
+    if (prevprops.query!=this.props.query){this.setState({
+      catquery:this.props.query,
+      loading:true
+    })
+    let url = `https://newsapi.org/v2/everything?q=${this.props.query}&pageSize=18&apiKey=${APIKEY}&page=${this.state.page}`;
+    let data = await fetch(url);
+    let parsedData = await data.json();
+    let totalResultsAvlb =
+      parsedData.totalResults < 100 ? parsedData.totalResults : 100;
+    console.log(url);  
+    this.setState({
+      articles: parsedData.articles,
+      loading: false,
+      totalpages: Math.ceil(totalResultsAvlb / 18) - 1,
+      page:1
+    });}
   }
 
   render() {
+    let {query} = this.props;
     return (
       <>
         <div className="container" style={{ paddingTop: "56px" }}>
@@ -51,42 +99,57 @@ export class News extends Component {
               </>
             ) : (
               <>
-                {this.state.articles.map((element) => {
-                  return (
-                    <div className="col" key={element.url}>
-                      <NewsItem
-                        title={
-                          element.title && element.title.length > 50
-                            ? element.title.slice(0, 50) + "..."
-                            : element.title || ""
-                        }
-                        description={
-                          element.description &&
-                          element.description.length > 100
-                            ? element.description.slice(0, 100) + "..."
-                            : element.description || ""
-                        }
-                        imgsource={
-                          element.urlToImage
-                            ? element.urlToImage
-                            : "/logo512.png"
-                        }
-                        newsUrl={element.url}
-                        loading={false}
-                      />
-                    </div>
-                  );
-                })}
+                {Array.isArray(this.state.articles) &&
+                  this.state.articles.map((element) => {
+                    return (
+                      <div className="col" key={element.url}>
+                        <NewsItem
+                          title={
+                            element.title && element.title.length > 50
+                              ? element.title.slice(0, 50) + "..."
+                              : element.title || ""
+                          }
+                          description={
+                            element.description &&
+                            element.description.length > 100
+                              ? element.description.slice(0, 100) + "..."
+                              : element.description || ""
+                          }
+                          imgsource={
+                            element.urlToImage
+                              ? element.urlToImage
+                              : "/logo512.png"
+                          }
+                          newsUrl={element.url}
+                          loading={false}
+                        />
+                      </div>
+                    );
+                  })}
               </>
             )}
           </div>
         </div>
         <div className="container d-flex justify-content-between p-3 px-4">
-          <button type="button" disabled={this.state.page >= 1?  true:false} onClick={this.prevHandler} className="btn btn-primary">
+          <button
+            type="button"
+            disabled={this.state.page <= 1 ? true : false}
+            onClick={this.prevHandler}
+            className="btn btn-primary"
+          >
             &larr; Previous
           </button>
-          <button type="button" disabled={this.state.totalpages <= this.state.page? true:false} onClick={this.nextHandler} className="btn btn-primary">Next &rarr;</button>
-
+          <p>
+            Page {this.state.page} of {this.state.totalpages}
+          </p>
+          <button
+            type="button"
+            disabled={this.state.totalpages <= this.state.page ? true : false}
+            onClick={this.nextHandler}
+            className="btn btn-primary"
+          >
+            Next &rarr;
+          </button>
         </div>
       </>
     );
