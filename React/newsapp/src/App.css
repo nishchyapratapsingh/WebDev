@@ -52,7 +52,9 @@
 
 .hoverstyle:hover {
   cursor: pointer;
-  animation: beautifulFloat 2s ease-in-out infinite;
+  transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  /* animation: beautifulFloat 2s ease-in-out infinite; */
 }
 
 @keyframes beautifulFloat {

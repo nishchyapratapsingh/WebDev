@@ -8,7 +8,7 @@ export class Navbar extends Component {
         <nav className="navbar navbar-expand-lg bg-body-tertiary position-fixed" style={{zIndex: "10", width: "100%", top: "0"}}>
           <div className="container-fluid">
             <a className="navbar-brand" href="/">
-              Navbar
+              NewsEagle
             </a>
             <button
               className="navbar-toggler"
