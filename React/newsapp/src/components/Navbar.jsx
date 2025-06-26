@@ -1,8 +1,11 @@
 import React, { Component } from "react";
 
 export class Navbar extends Component {
+  constructor(props) {
+    super(props);
+    this.searchInput = React.createRef();
+  }
   render() {
-    let { querySelect } = this.props;
     return (
       <>
         <nav
@@ -39,7 +42,6 @@ export class Navbar extends Component {
               <div className="nav-item dropdown mx-2">
                 <a
                   className="nav-link dropdown-toggle"
-                  
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
@@ -51,7 +53,6 @@ export class Navbar extends Component {
                     <a
                       onClick={() => this.props.querySelect("Sports")}
                       className="dropdown-item"
-                      
                     >
                       Sports
                     </a>
@@ -60,7 +61,6 @@ export class Navbar extends Component {
                     <a
                       onClick={() => this.props.querySelect("Politics")}
                       className="dropdown-item"
-                      
                     >
                       Politics
                     </a>
@@ -69,7 +69,6 @@ export class Navbar extends Component {
                     <a
                       onClick={() => this.props.querySelect("Finance")}
                       className="dropdown-item"
-                      
                     >
                       Finance
                     </a>
@@ -78,7 +77,6 @@ export class Navbar extends Component {
                     <a
                       onClick={() => this.props.querySelect("Movies")}
                       className="dropdown-item"
-                      
                     >
                       Movies
                     </a>
@@ -88,12 +86,21 @@ export class Navbar extends Component {
 
               <form className="d-flex" role="search">
                 <input
+                  ref={this.searchInput}
                   className="form-control me-2"
                   type="search"
                   placeholder="Search"
                   aria-label="Search"
                 />
-                <button className="btn btn-outline-success" type="submit">
+                <button
+                  onClick={(e) => {
+                    e.preventDefault();
+                    let value = this.searchInput.current.value;
+                    this.props.querySelect(value);
+                  }}
+                  className="btn btn-outline-success"
+                  type="submit"
+                >
                   Search
                 </button>
               </form>

@@ -38,7 +38,7 @@ export class NewsItem extends Component {
             <h5 className="card-title">{title}</h5>
             <p className="card-text">{description}</p>
             <div
-              className="btn btn-sm btn-primary hoverstyle"
+              className="btn btn-sm btn-primary"
               style={{ position: "absolute", bottom: "10px" }}
             >
               Read More
