@@ -14,7 +14,6 @@ export class NewsItem extends Component {
         
         <div
           className="card m-2 h-100 position-relative hoverstyle"
-          style={{ width: "18rem" }}
         >
           <img src={imgsource} className="card-img-top" alt="..." />
           <div className="card-body">

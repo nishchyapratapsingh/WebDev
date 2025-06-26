@@ -81,6 +81,14 @@ export class Navbar extends Component {
                       Movies
                     </a>
                   </li>
+                  <li>
+                    <a
+                      onClick={() => this.props.querySelect("Health")}
+                      className="dropdown-item"
+                    >
+                      Health
+                    </a>
+                  </li>
                 </ul>
               </div>
 
