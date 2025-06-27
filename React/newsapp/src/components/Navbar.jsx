@@ -9,8 +9,16 @@ export class Navbar extends Component {
     return (
       <>
         <nav
-          className="navbar navbar-expand-lg bg-body-tertiary position-fixed"
-          style={{ zIndex: "10", width: "100%", top: "0" }}
+          className="navbar navbar-expand-lg position-fixed"
+          style={{
+            zIndex: "10",
+            width: "100%",
+            top: "0",
+            backgroundColor: "rgba(255, 255, 255, 0.6)",
+            backdropFilter: "blur(10px)", 
+            WebkitBackdropFilter: "blur(10px)", 
+            borderBottom: "1px solid rgba(255, 255, 255, 0.3)", 
+          }}
         >
           <div className="container-fluid">
             <a className="navbar-brand" href="/">
@@ -87,6 +95,14 @@ export class Navbar extends Component {
                       className="dropdown-item"
                     >
                       Health
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      onClick={() => this.props.querySelect("Entertainment")}
+                      className="dropdown-item"
+                    >
+                      Entertainment
                     </a>
                   </li>
                 </ul>

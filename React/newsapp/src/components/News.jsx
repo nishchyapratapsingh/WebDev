@@ -120,6 +120,8 @@ export class News extends Component {
                           }
                           newsUrl={element.url}
                           loading={false}
+                          author={element.author?element.author.split(" ").slice(0, 2).join(" "):"unknown"}
+                          date={element.publishedAt}
                         />
                       </div>
                     );
