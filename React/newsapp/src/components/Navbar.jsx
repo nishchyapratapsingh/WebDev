@@ -14,7 +14,7 @@ export class Navbar extends Component {
             zIndex: "10",
             width: "100%",
             top: "0",
-            backgroundColor: "rgba(255, 255, 255, 0.6)",
+            backgroundColor: "rgba(237, 223, 223, 0.6)",
             backdropFilter: "blur(10px)", 
             WebkitBackdropFilter: "blur(10px)", 
             borderBottom: "1px solid rgba(255, 255, 255, 0.3)", 

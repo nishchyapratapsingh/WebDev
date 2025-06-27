@@ -35,7 +35,7 @@ export class NewsItem extends Component {
             <p className="card-text">{description}</p>
             <br></br>
             <p className="card-text" style={{ position: "absolute", bottom: "30px" }}>
-              <small className="text-body-secondary" style={{ fontSize: "0.6rem" }}>By {author} on {new Date(date).toGMTString()}</small>
+              <small className="text-body-secondary" style={{ fontSize: "0.8rem" }}>{new Date(date).toGMTString()}</small>
               
             </p>
             <div
