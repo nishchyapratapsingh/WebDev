@@ -2,7 +2,8 @@ import React, { Component } from "react";
 
 export class NewsItem extends Component {
   render() {
-    let { title, description, imgsource, newsUrl, loading, author, date } = this.props;
+    let { title, description, imgsource, newsUrl, loading, author, date } =
+      this.props;
     return (
       <a
         href={newsUrl}
@@ -29,21 +30,29 @@ export class NewsItem extends Component {
                 <div className="btn btn-primary disabled placeholder col-6" />
               </div>
             ) : (
-              <></>
+              <>
+                <h5 className="card-title">{title}</h5>
+                <p className="card-text">{description}</p>
+                <br></br>
+                <p
+                  className="card-text"
+                  style={{ position: "absolute", bottom: "30px" }}
+                >
+                  <small
+                    className="text-body-secondary"
+                    style={{ fontSize: "0.8rem" }}
+                  >
+                    {new Date(date).toGMTString()}
+                  </small>
+                </p>
+                <div
+                  className="btn btn-sm btn-primary"
+                  style={{ position: "absolute", bottom: "10px" }}
+                >
+                  Read More
+                </div>
+              </>
             )}
-            <h5 className="card-title">{title}</h5>
-            <p className="card-text">{description}</p>
-            <br></br>
-            <p className="card-text" style={{ position: "absolute", bottom: "30px" }}>
-              <small className="text-body-secondary" style={{ fontSize: "0.8rem" }}>{new Date(date).toGMTString()}</small>
-              
-            </p>
-            <div
-              className="btn btn-sm btn-primary"
-              style={{ position: "absolute", bottom: "10px" }}
-            >
-              Read More
-            </div>
           </div>
         </div>
       </a>
