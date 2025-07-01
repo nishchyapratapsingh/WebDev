@@ -122,7 +122,8 @@ export class Navbar extends Component {
                     let value = this.searchInput.current.value;
                     this.props.querySelect(value);
                   }}
-                  className="btn btn-outline-success"
+                  className="btn btn-success"
+                  style={{backgroundColor: "#a25e36", border: "none"}}
                   type="submit"
                 >
                   Search

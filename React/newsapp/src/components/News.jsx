@@ -20,9 +20,12 @@ export class News extends Component {
   async componentDidMount() {
     let url = `https://newsapi.org/v2/everything?q=${this.state.catquery}&pageSize=18&apiKey=${APIKEY}&page=${this.state.page}`;
     let data = await fetch(url);
+
     let parsedData = await data.json();
     let totalResultsAvlb =
       parsedData.totalResults < 100 ? parsedData.totalResults : 100;
+    this.props.setProgress(40);
+
     this.setState({
       articles: parsedData.articles,
       loading: false,
@@ -31,21 +34,29 @@ export class News extends Component {
         : Math.ceil(totalResultsAvlb / 18) - 1,
     });
     this.totRes = totalResultsAvlb;
+    this.props.setProgress(100);
   }
 
   async componentDidUpdate(prevprops) {
     if (prevprops.query !== this.props.query) {
+      this.props.setProgress(10);
       this.setState({
         catquery: this.props.query,
         loading: true,
       });
+      this.props.setProgress(20);
+
       let url = `https://newsapi.org/v2/everything?q=${encodeURIComponent(
         this.props.query
       )}&pageSize=18&apiKey=${APIKEY}&page=1`;
       let data = await fetch(url);
       let parsedData = await data.json();
+      this.props.setProgress(30);
+
       let totalResultsAvlb =
         parsedData.totalResults < 100 ? parsedData.totalResults : 100;
+      this.props.setProgress(50);
+
       this.setState({
         articles: parsedData.articles,
         loading: false,
@@ -56,6 +67,7 @@ export class News extends Component {
       });
       document.title = `${this.titleCase(this.state.catquery)} - NewsEagle`;
       this.totRes = totalResultsAvlb;
+      this.props.setProgress(100);
     }
   }
   titleCase = (str) => {
