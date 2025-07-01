@@ -27,7 +27,7 @@ export class NewsItem extends Component {
                   <span className="placeholder col-6"></span>
                   <span className="placeholder col-8"></span>
                 </p>
-                <div className="btn btn-primary disabled placeholder col-6" />
+                <div className="btn btn-primary disabled placeholder col-6" style={{backgroundColor: "#a25e36", border: "none"}}/>
               </div>
             ) : (
               <>
@@ -47,7 +47,8 @@ export class NewsItem extends Component {
                 </p>
                 <div
                   className="btn btn-sm btn-primary"
-                  style={{ position: "absolute", bottom: "10px" }}
+
+                  style={{ position: "absolute", bottom: "10px", backgroundColor: "#a25e36", border: "none" }}
                 >
                   Read More
                 </div>
