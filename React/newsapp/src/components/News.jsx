@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import NewsItem from "./NewsItem";
-import APIKEY from "../apikey.mjs";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Loading from "./Loading";
 
@@ -15,10 +14,11 @@ export class News extends Component {
       catquery: "world",
     };
   }
+  APIKEY = process.env.REACT_APP_API_KEY;
   totRes = 0;
 
   async componentDidMount() {
-    let url = `https://newsapi.org/v2/everything?q=${this.state.catquery}&pageSize=18&apiKey=${APIKEY}&page=${this.state.page}`;
+    let url = `https://newsapi.org/v2/everything?q=${this.state.catquery}&pageSize=18&apiKey=${this.APIKEY}&page=${this.state.page}`;
     let data = await fetch(url);
 
     let parsedData = await data.json();
@@ -48,7 +48,7 @@ export class News extends Component {
 
       let url = `https://newsapi.org/v2/everything?q=${encodeURIComponent(
         this.props.query
-      )}&pageSize=18&apiKey=${APIKEY}&page=1`;
+      )}&pageSize=18&apiKey=${this.APIKEY}&page=1`;
       let data = await fetch(url);
       let parsedData = await data.json();
       this.props.setProgress(30);
@@ -68,6 +68,10 @@ export class News extends Component {
       document.title = `${this.titleCase(this.state.catquery)} - NewsEagle`;
       this.totRes = totalResultsAvlb;
       this.props.setProgress(100);
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
     }
   }
   titleCase = (str) => {
@@ -80,7 +84,7 @@ export class News extends Component {
 
   fetchMoreData = async () => {
     let nextPage = this.state.page + 1;
-    let url = `https://newsapi.org/v2/everything?q=${this.state.catquery}&pageSize=18&apiKey=${APIKEY}&page=${nextPage}`;
+    let url = `https://newsapi.org/v2/everything?q=${this.state.catquery}&pageSize=18&apiKey=${this.APIKEY}&page=${nextPage}`;
     let data = await fetch(url);
     let parsedData = await data.json();
     setTimeout(() => {
